@@ -1,7 +1,5 @@
-import ReactDOM from "react-dom";
-
 export default function Menu() {
-  return ReactDOM.createPortal(
+  return (
     <div className="absolute top-0 left-0 pt-3">
       <button
         type="button"
@@ -9,7 +7,6 @@ export default function Menu() {
       >
         menu
       </button>
-    </div>,
-    document.querySelector("body")
+    </div>
   );
 }

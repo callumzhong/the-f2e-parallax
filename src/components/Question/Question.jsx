@@ -1,0 +1,44 @@
+import Title from "@/components/UI/Titile";
+import QuestionItem from "./QuestionItem";
+import ImageQuestionMobile1 from "@/assets/main/question_1_m.png";
+import ImageQuestion1 from "@/assets/main/question_1.png";
+import ImageQuestion2 from "@/assets/main/question_2.png";
+import ImageQuestionMobile3 from "@/assets/main/question_3_m.png";
+import ImageQuestion3 from "@/assets/main/question_3.png";
+
+const items = [
+  {
+    id: "question-1",
+    title: "羨慕別人的酷酷網頁動畫？",
+    image: (
+      <picture>
+        <source media="(min-width:768px)" srcSet={ImageQuestion1} />
+        <img src={ImageQuestionMobile1} alt="" />
+      </picture>
+    ),
+  },
+  {
+    id: "question-2",
+    title: "滿足不了同事的許願？",
+    image: <img src={ImageQuestion2} alt="" />,
+  },
+  {
+    id: "question-3",
+    title: "動畫技能樹太雜無從下手？",
+    image: (
+      <picture>
+        <source media="(min-width:768px)" srcSet={ImageQuestion3} />
+        <img src={ImageQuestionMobile3} alt="" />
+      </picture>
+    ),
+  },
+];
+
+export default function Question() {
+  return (
+    <>
+      <Title>你是否也有以下困擾？</Title>
+      <QuestionItem items={items} />
+    </>
+  );
+}

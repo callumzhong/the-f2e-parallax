@@ -13,15 +13,6 @@
     @apply flex min-h-screen flex-col bg-secondary;
   }
 
-  #root header,
-  #root footer {
-    @apply flex-shrink-0 flex-grow-0;
-  }
-
-  #root > main {
-    @apply flex-grow;
-  }
-
   @media (min-width: theme(screens.md)) {
     html,
     body {
