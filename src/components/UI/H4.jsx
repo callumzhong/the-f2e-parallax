@@ -1,8 +1,13 @@
 import PropTypes from "prop-types";
 
 export default function H4({ children, className }) {
-  const classes = `text-[20px] font-bold leading-relaxed md:text-[32px] ${className}`;
-  return <h4 className={classes}>{children}</h4>;
+  return (
+    <h4
+      className={`text-[20px] font-bold leading-relaxed md:text-[32px] ${className}`}
+    >
+      {children}
+    </h4>
+  );
 }
 
 H4.defaultProps = {

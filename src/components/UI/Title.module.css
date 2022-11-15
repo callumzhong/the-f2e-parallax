@@ -1,0 +1,4 @@
+.title {
+  border-image: url("@/assets/bg/bg_talking_c.png");
+  border-image-slice: 1 fill;
+}
