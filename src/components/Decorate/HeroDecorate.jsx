@@ -1,5 +1,4 @@
 import ImageReadyFrame from "@/assets/main/ready_frame.png";
-
 import ImageReady1 from "@/assets/main/ready_1.png";
 import ImageReady2 from "@/assets/main/ready_2.png";
 import ImageReady3 from "@/assets/main/ready_3.png";

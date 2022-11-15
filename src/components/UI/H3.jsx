@@ -1,9 +1,13 @@
 import PropTypes from "prop-types";
+import clsx from "clsx";
 
 export default function H3({ children, className }) {
   return (
     <h3
-      className={`text-[24px] font-bold leading-relaxed md:text-[44px] md:leading-normal ${className}`}
+      className={clsx(
+        `text-[24px] font-bold leading-relaxed md:text-[44px] md:leading-normal`,
+        className
+      )}
     >
       {children}
     </h3>

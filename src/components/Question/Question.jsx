@@ -1,10 +1,10 @@
 import Title from "@/components/UI/Title";
-import QuestionItem from "./QuestionItem";
 import ImageQuestionMobile1 from "@/assets/main/question_1_m.png";
 import ImageQuestion1 from "@/assets/main/question_1.png";
 import ImageQuestion2 from "@/assets/main/question_2.png";
 import ImageQuestionMobile3 from "@/assets/main/question_3_m.png";
 import ImageQuestion3 from "@/assets/main/question_3.png";
+import QuestionList from "./QuestionList";
 
 const items = [
   {
@@ -36,9 +36,9 @@ const items = [
 
 export default function Question() {
   return (
-    <>
+    <section className="relative w-full pt-[59px] pb-[200px]">
       <Title>你是否也有以下困擾？</Title>
-      <QuestionItem items={items} />
-    </>
+      <QuestionList items={items} />
+    </section>
   );
 }

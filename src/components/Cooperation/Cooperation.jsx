@@ -1,9 +1,9 @@
-import Title from "../UI/Title";
-import CooperationItem from "./CooperationItem";
 import ImageCharacterF2E from "@/assets/character/character_f2e.png";
-import ImageCharacterUI from "@/assets/character/character_ui.png";
 import ImageCharacterTeam from "@/assets/character/character_team.png";
+import ImageCharacterUI from "@/assets/character/character_ui.png";
 import H5 from "../UI/H5";
+import Title from "../UI/Title";
+import CooperationList from "./CooperationList";
 
 const items = [
   {
@@ -31,12 +31,12 @@ const items = [
 
 export default function Cooperation() {
   return (
-    <>
+    <section className="relative w-full pt-[59px] pb-[200px]">
       <Title>本屆主題：互動式網頁設計？</Title>
       <H5 className="-mt-10 mb-10 text-center text-secondary-dark">
         以下兩個角色進行攜手合作
       </H5>
-      <CooperationItem items={items} />
-    </>
+      <CooperationList items={items} />
+    </section>
   );
 }

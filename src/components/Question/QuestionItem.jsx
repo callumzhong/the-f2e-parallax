@@ -1,34 +1,29 @@
 import PropTypes from "prop-types";
-import H4 from "../UI/H4";
+import H4 from "@/components/UI/H4";
 
-export default function QuestionItem({ items }) {
+export default function QuestionItem({ id, title, image }) {
   return (
-    <ul className="flex flex-col gap-4 px-5">
-      {items.map((item) => (
-        <li key={item.id}>
-          <H4 className="text-center text-highlight">{item.title}</H4>
-          <picture>
-            {item.largePath && (
-              <source
-                media={`(min-width:${item.image.largeMedia}px)`}
-                srcSet={item.image.largePath}
-              />
-            )}
-
-            <img src={item.image.path} alt="" />
-          </picture>
-        </li>
-      ))}
-    </ul>
+    <li key={id}>
+      <H4 className="text-center text-highlight">{title}</H4>
+      <picture>
+        {image.largePath && (
+          <source
+            media={`(min-width:${image.largeMedia}px)`}
+            srcSet={image.largePath}
+          />
+        )}
+        <img src={image.path} alt="" />
+      </picture>
+    </li>
   );
 }
 
 QuestionItem.propTypes = {
-  items: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      title: PropTypes.string.isRequired,
-      image: PropTypes.node.isRequired,
-    })
-  ).isRequired,
+  id: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  image: PropTypes.shape({
+    largePath: PropTypes.string,
+    largeMedia: PropTypes.number,
+    path: PropTypes.string.isRequired,
+  }).isRequired,
 };

@@ -1,10 +1,14 @@
 import PropTypes from "prop-types";
+import clsx from "clsx";
 import classes from "./Title.module.css";
 
 export default function Title({ children }) {
   return (
     <div
-      className={`${classes.title} mt-6 mb-10 pt-3 pb-7 text-center text-2xl font-bold leading-normal text-primary`}
+      className={clsx(
+        `mt-6 mb-10 pt-3 pb-7 text-center text-2xl font-bold leading-normal text-primary`,
+        classes.title
+      )}
     >
       {children}
     </div>

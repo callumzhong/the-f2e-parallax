@@ -1,9 +1,13 @@
 import PropTypes from "prop-types";
+import clsx from "clsx";
 
 export default function Strong({ children, className }) {
   return (
     <strong
-      className={`text-[18px] font-bold leading-relaxed md:text-[24px] ${className}`}
+      className={clsx(
+        `text-[18px] font-bold leading-relaxed md:text-[24px]`,
+        className
+      )}
     >
       {children}
     </strong>
