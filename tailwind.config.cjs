@@ -15,6 +15,17 @@ module.exports = {
         "btn-burger-open": "url('@/assets/btn/btn_burger_open.png')",
         "btn-burger-open-hover": "url('@/assets/btn/btn_burger_open_h.png')",
         "btn-burger-open-pressed": "url('@/assets/btn/btn_burger_open_p.png')",
+        decorate_01: "url('@/assets/bg/bg_decorate_01.png')",
+        decorate_02: "url('@/assets/bg/bg_decorate_02.png')",
+        decorate_03: "url('@/assets/bg/bg_decorate_03.png')",
+        decorate_04: "url('@/assets/bg/bg_decorate_04.png')",
+        decorate_05: "url('@/assets/bg/bg_decorate_05.png')",
+        decorate_06: "url('@/assets/bg/bg_decorate_06.png')",
+        decorate_07: "url('@/assets/bg/bg_decorate_07.png')",
+        decorate_08: "url('@/assets/bg/bg_decorate_08.png')",
+        decorate_09: "url('@/assets/bg/bg_decorate_09.png')",
+        ready_frame: "url('@/assets/main/ready_frame.png')",
+        talking_c: "url(@/assets/bg/bg_talking_c.png)",
       },
       colors: {
         primary: {
