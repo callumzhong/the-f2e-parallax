@@ -7,7 +7,16 @@ export default function QuestionItem({ items }) {
       {items.map((item) => (
         <li key={item.id}>
           <H4 className="text-center text-highlight">{item.title}</H4>
-          {item.image}
+          <picture>
+            {item.largePath && (
+              <source
+                media={`(min-width:${item.image.largeMedia}px)`}
+                srcSet={item.image.largePath}
+              />
+            )}
+
+            <img src={item.image.path} alt="" />
+          </picture>
         </li>
       ))}
     </ul>

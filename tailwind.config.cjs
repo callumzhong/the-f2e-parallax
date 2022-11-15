@@ -26,6 +26,9 @@ module.exports = {
         decorate_09: "url('@/assets/bg/bg_decorate_09.png')",
         ready_frame: "url('@/assets/main/ready_frame.png')",
         talking_c: "url(@/assets/bg/bg_talking_c.png)",
+        btn_join: "url(@/assets/btn/btn_join.png)",
+        btn_join_hover: "url(@/assets/btn/btn_join_h.png)",
+        btn_joinHand: "url(@/assets/btn/btn_joinHand.png)",
       },
       colors: {
         primary: {

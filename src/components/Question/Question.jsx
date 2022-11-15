@@ -10,27 +10,27 @@ const items = [
   {
     id: "question-1",
     title: "羨慕別人的酷酷網頁動畫？",
-    image: (
-      <picture>
-        <source media="(min-width:768px)" srcSet={ImageQuestion1} />
-        <img src={ImageQuestionMobile1} alt="" />
-      </picture>
-    ),
+    image: {
+      path: ImageQuestionMobile1,
+      largeMedia: 768,
+      largePath: ImageQuestion1,
+    },
   },
   {
     id: "question-2",
     title: "滿足不了同事的許願？",
-    image: <img src={ImageQuestion2} alt="" />,
+    image: {
+      path: ImageQuestion2,
+    },
   },
   {
     id: "question-3",
     title: "動畫技能樹太雜無從下手？",
-    image: (
-      <picture>
-        <source media="(min-width:768px)" srcSet={ImageQuestion3} />
-        <img src={ImageQuestionMobile3} alt="" />
-      </picture>
-    ),
+    image: {
+      path: ImageQuestionMobile3,
+      largeMedia: 768,
+      largePath: ImageQuestion3,
+    },
   },
 ];
 
