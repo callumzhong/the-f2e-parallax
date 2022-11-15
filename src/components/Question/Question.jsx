@@ -1,4 +1,4 @@
-import Title from "@/components/UI/Titile";
+import Title from "@/components/UI/Title";
 import QuestionItem from "./QuestionItem";
 import ImageQuestionMobile1 from "@/assets/main/question_1_m.png";
 import ImageQuestion1 from "@/assets/main/question_1.png";

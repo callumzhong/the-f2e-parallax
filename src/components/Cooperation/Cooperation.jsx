@@ -1,4 +1,4 @@
-import Title from "../UI/Titile";
+import Title from "../UI/Title";
 import CooperationItem from "./CooperationItem";
 import ImageCharacterF2E from "@/assets/character/character_f2e.png";
 import ImageCharacterUI from "@/assets/character/character_ui.png";
