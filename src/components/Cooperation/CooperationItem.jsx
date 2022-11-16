@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import PropTypes from "prop-types";
 import H4 from "../UI/H4";
+import JoinButton from "../UI/JoinButton";
 
 export default function CooperationItem({ id, title, image, isReverse }) {
   return (
@@ -11,10 +12,7 @@ export default function CooperationItem({ id, title, image, isReverse }) {
       key={id}
     >
       <div className="w-2/6">
-        <div className="group mx-auto mb-4 w-max">
-          <div className="mx-auto mb-3 h-[71px] w-[51px] bg-btn_joinHand bg-cover opacity-0 group-hover:opacity-100" />
-          <div className="h-[60px] w-[103px] bg-btn_join bg-cover" />
-        </div>
+        <JoinButton href="google" className="mb-4" />
         <H4 className="text-center text-primary">{title}</H4>
       </div>
       <div className="w-2/6">

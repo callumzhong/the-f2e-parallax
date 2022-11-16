@@ -10,6 +10,7 @@ export const theme = {
 
 export const size = {
   md: "px-6 py-1 text-lg leading-loose",
+  lg: "px-7 py-2 text-xl",
 };
 
 export default function Button({

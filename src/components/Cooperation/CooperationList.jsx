@@ -2,7 +2,6 @@ import PropTypes from "prop-types";
 import CooperationItem from "./CooperationItem";
 
 export default function CooperationList({ items }) {
-  console.log(items);
   return (
     <ul className="flex flex-col gap-5">
       {items.map((item, idx) => (

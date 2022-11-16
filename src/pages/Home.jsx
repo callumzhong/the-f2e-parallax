@@ -1,9 +1,9 @@
-import Hero from "@/components/Hero/Hero";
-import HeroDecorate from "@/components/Decorate";
-import Question from "@/components/Question/Question";
 import Cooperation from "@/components/Cooperation";
+import Hero from "@/components/Hero";
+import Question from "@/components/Question";
+import Schedule from "@/components/Schedule";
+import WeeklyStage from "@/components/WeeklyStage";
 import Layout from "./Layout";
-import WeeklyStage from "@/components/WeeklyStage/WeeklyStage";
 
 export default function HomePage() {
   return (
@@ -12,6 +12,7 @@ export default function HomePage() {
       <Question />
       <Cooperation />
       <WeeklyStage />
+      <Schedule />
     </Layout>
   );
 }
