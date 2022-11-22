@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
-import { ReactComponent as IconUser } from "../../assets/ic/ic_users.svg";
-import Strong from "./Strong";
+import { ReactComponent as IconUser } from "@/assets/ic/ic_users.svg";
+import { Strong } from "./Typography";
 
 export default function UserBadges({ children }) {
   return (

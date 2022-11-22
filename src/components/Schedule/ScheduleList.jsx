@@ -2,7 +2,6 @@ import propsTypes from "prop-types";
 import ScheduleItem from "./ScheduleItem";
 
 export default function ScheduleList({ items }) {
-  console.log(items);
   return (
     <ul className="flex flex-wrap gap-10">
       {items.map((item) => (

@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import H4 from "@/components/UI/H4";
+import { H4 } from "../Typography";
 
 export default function QuestionItem({ id, title, image }) {
   return (

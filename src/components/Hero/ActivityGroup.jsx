@@ -1,5 +1,5 @@
-import H4 from "../UI/H4";
-import UserBadges from "../UI/UserBadges";
+import { H4 } from "../Typography";
+import UserBadges from "../UserBadges";
 
 export default function ActivityGroup() {
   return (

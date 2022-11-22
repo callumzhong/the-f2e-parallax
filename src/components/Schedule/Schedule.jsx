@@ -1,8 +1,8 @@
 import ImageDateStart from "@/assets/main/date_start.png";
 import ImageDateUpload from "@/assets/main/date_upload.png";
-import Title from "@/components/UI/Title";
-import H2 from "../UI/H2";
-import JoinButton from "../UI/JoinButton";
+import Title from "@/components/Title/Title";
+import JoinButton from "../JoinButton";
+import { H2 } from "../Typography";
 import ScheduleList from "./ScheduleList";
 
 const items = [

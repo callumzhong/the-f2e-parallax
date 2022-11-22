@@ -1,4 +1,4 @@
-import H1 from "../UI/H1";
+import { H1 } from "../Typography";
 import ActivityGroup from "./ActivityGroup";
 
 export default function Content() {

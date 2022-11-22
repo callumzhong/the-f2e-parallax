@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import PropTypes from "prop-types";
-import H4 from "../UI/H4";
-import JoinButton from "../UI/JoinButton";
+import JoinButton from "../JoinButton";
+import { H4 } from "../Typography";
 
 export default function CooperationItem({ id, title, image, isReverse }) {
   return (

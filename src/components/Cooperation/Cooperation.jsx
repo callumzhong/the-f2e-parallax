@@ -1,8 +1,8 @@
 import ImageCharacterF2E from "@/assets/character/character_f2e.png";
 import ImageCharacterTeam from "@/assets/character/character_team.png";
 import ImageCharacterUI from "@/assets/character/character_ui.png";
-import H5 from "../UI/H5";
-import Title from "../UI/Title";
+import Title from "../Title/Title";
+import { H5 } from "../Typography";
 import CooperationList from "./CooperationList";
 
 const items = [

@@ -1,6 +1,6 @@
 import propTypes from "prop-types";
-import Button, { size as buttonSize, theme as buttonTheme } from "../UI/Button";
-import H2 from "../UI/H2";
+import Button from "../Button";
+import { H2 } from "../Typography";
 
 export default function ScheduleItem({ title, timeline, image, description }) {
   return (
@@ -11,7 +11,7 @@ export default function ScheduleItem({ title, timeline, image, description }) {
         image.element
       )}
       <H2 className="mb-3 text-highlight">{title}</H2>
-      <Button className="mb-3" theme={buttonTheme.primary} size={buttonSize.lg}>
+      <Button className="mb-3" color="primary" size="lg">
         {timeline}
       </Button>
       {description}

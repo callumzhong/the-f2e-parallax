@@ -1,8 +1,8 @@
 import ImageWeek1 from "@/assets/main/week_1.png";
 import ImageWeek2 from "@/assets/main/week_2.png";
 import ImageWeek3 from "@/assets/main/week_3.png";
-import Title from "@/components/UI/Title";
-import H5 from "../UI/H5";
+import Title from "@/components/Title/Title";
+import { H5 } from "../Typography";
 import WeeklyStageList from "./WeeklyStageList";
 
 const items = [
