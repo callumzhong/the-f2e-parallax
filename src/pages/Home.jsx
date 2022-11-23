@@ -1,3 +1,4 @@
+import Award from "@/components/Award";
 import Cooperation from "@/components/Cooperation";
 import Hero from "@/components/Hero";
 import Question from "@/components/Question";
@@ -13,6 +14,7 @@ export default function HomePage() {
       <Cooperation />
       <WeeklyStage />
       <Schedule />
+      <Award />
     </Layout>
   );
 }
