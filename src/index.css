@@ -2,21 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "GenJyuuGothic-P";
+  src: local("GenJyuuGothic-P-Bold"),
+    url("/fonts/GenJyuuGothic-P-Bold.ttf")
+      format("truetype");
+}
+
 @layer base {
-  html,
-  body {
-    font-size: 16px;
-    line-height: 1.6;
-  }
-
-  #root {
-    @apply flex min-h-screen flex-col bg-secondary;
-  }
-
-  @media (min-width: theme(screens.md)) {
-    html,
-    body {
-      font-size: 18px;
-    }
+  html {
+    font-family: "GenJyuuGothic-P", sans-serif;
   }
 }
