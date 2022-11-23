@@ -7,7 +7,7 @@ export default function Title({ children }) {
     <div
       className={clsx(
         `mt-6 mb-10 pt-3 pb-7 text-center text-2xl font-bold leading-normal text-primary`,
-        classes.title
+        classes.title,
       )}
     >
       {children}

@@ -1,8 +1,10 @@
 import Award from "@/components/Award";
 import Cooperation from "@/components/Cooperation";
+import Finish from "@/components/Finish";
 import Hero from "@/components/Hero";
 import Question from "@/components/Question";
 import Schedule from "@/components/Schedule";
+import Sponsor from "@/components/Sponsor";
 import WeeklyStage from "@/components/WeeklyStage";
 import Layout from "./Layout";
 
@@ -15,6 +17,8 @@ export default function HomePage() {
       <WeeklyStage />
       <Schedule />
       <Award />
+      <Sponsor />
+      <Finish />
     </Layout>
   );
 }

@@ -16,7 +16,7 @@ export default function AwardContent() {
             由評審進行直播公布名單！
           </li>
         </ul>
-        <H4 className="mb-6 text-highlight">獎項</H4>
+        <H4 className="text-highlight">獎項</H4>
         <ul className="text-primary">
           <li>初選佳作 共六十位 數位獎狀</li>
           <li>個人企業獎 共六位 NTD 3,000 /位</li>
