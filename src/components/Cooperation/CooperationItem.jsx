@@ -6,16 +6,16 @@ import { H4 } from "../Typography";
 export default function CooperationItem({ id, title, image, isReverse }) {
   return (
     <li
-      className={clsx("mx-auto flex items-center justify-center gap-5", {
+      className={clsx("mx-auto flex items-center gap-5", {
         "flex-row-reverse": isReverse,
       })}
       key={id}
     >
-      <div className="w-2/6">
+      <div className="w-1/2">
         <JoinButton href="google" className="mb-4" />
-        <H4 className="text-center text-primary">{title}</H4>
+        <H4 className="whitespace-nowrap text-center text-primary">{title}</H4>
       </div>
-      <div className="w-2/6">
+      <div className="w-1/2">
         <img src={image.path} alt="" />
       </div>
     </li>

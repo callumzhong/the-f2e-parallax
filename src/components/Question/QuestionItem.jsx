@@ -3,7 +3,7 @@ import { H4 } from "../Typography";
 
 export default function QuestionItem({ id, title, image }) {
   return (
-    <li key={id}>
+    <li className="w-full" key={id}>
       <H4 className="text-center text-highlight">{title}</H4>
       <picture>
         {image.largePath && (

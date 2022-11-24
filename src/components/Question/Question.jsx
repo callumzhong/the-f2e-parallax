@@ -12,7 +12,7 @@ const items = [
     title: "羨慕別人的酷酷網頁動畫？",
     image: {
       path: ImageQuestionMobile1,
-      largeMedia: 768,
+      largeMedia: 1024,
       largePath: ImageQuestion1,
     },
   },
@@ -28,7 +28,7 @@ const items = [
     title: "動畫技能樹太雜無從下手？",
     image: {
       path: ImageQuestionMobile3,
-      largeMedia: 768,
+      largeMedia: 1024,
       largePath: ImageQuestion3,
     },
   },

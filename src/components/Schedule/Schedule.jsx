@@ -2,7 +2,7 @@ import ImageDateStart from "@/assets/main/date_start.png";
 import ImageDateUpload from "@/assets/main/date_upload.png";
 import Title from "@/components/Title/Title";
 import JoinButton from "../JoinButton";
-import { H2 } from "../Typography";
+import { H2, H5 } from "../Typography";
 import ScheduleList from "./ScheduleList";
 
 const items = [
@@ -15,7 +15,9 @@ const items = [
       element: <JoinButton isStay />,
     },
     description: (
-      <p className="text-xl text-secondary-dark">截止前可修改報名組別</p>
+      <H5 as="p" className="text-secondary-dark">
+        截止前可修改報名組別
+      </H5>
     ),
   },
   {
@@ -27,9 +29,9 @@ const items = [
       path: ImageDateStart,
     },
     description: (
-      <p className="text-xl text-secondary-dark">
-        10/31(一) UI、團體組開賽 11/7(一) 前端組開賽
-      </p>
+      <H5 as="p" className="text-secondary-dark">
+        10/31(一) UI、團體組開賽 <br /> 11/7(一) 前端組開賽
+      </H5>
     ),
   },
   {
@@ -42,8 +44,10 @@ const items = [
     },
     description: (
       <>
-        <p className="text-xl text-secondary-dark">依賽程登錄作品</p>
-        <p className="text-lg text-highlight">額外競賽： 主題豐厚獎金等著你</p>
+        <H5 as="p" className="text-secondary-dark">
+          依賽程登錄作品
+        </H5>
+        <p className="text-highlight">額外競賽： 主題豐厚獎金等著你</p>
       </>
     ),
   },
@@ -54,7 +58,7 @@ export default function Schedule() {
     <section className="relative w-full pt-[59px]">
       <Title>重要時程</Title>
       <ScheduleList items={items} />
-      <H2 className="pt-[228px] pb-[252px] text-center text-highlight">
+      <H2 className="pt-[228px] pb-[252px] text-center text-highlight md:text-[28px]">
         區區修煉
         <br />
         已經無法滿足了嗎？

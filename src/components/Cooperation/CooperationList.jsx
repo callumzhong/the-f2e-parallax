@@ -3,7 +3,7 @@ import CooperationItem from "./CooperationItem";
 
 export default function CooperationList({ items }) {
   return (
-    <ul className="flex flex-col gap-5">
+    <ul className="mx-auto flex flex-col gap-5 px-5 md:w-[61.97%] md:px-0">
       {items.map((item, idx) => (
         <CooperationItem
           key={item.id}

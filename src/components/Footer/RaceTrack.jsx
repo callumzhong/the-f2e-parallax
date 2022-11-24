@@ -5,24 +5,23 @@ import ImageCharacterUIGif from "@/assets/character/character_ui.gif";
 
 export default function RaceTrack() {
   return (
-    <div className="absolute inset-x-5 bottom-0">
-      <img src={ImageRoad} alt="" />
+    <>
+      <img className="absolute inset-x-0 bottom-0" src={ImageRoad} alt="" />
       <img
-        className="absolute bottom-0 left-[10%] w-[112px]"
+        className="relative w-[112px] lg:w-auto"
         src={ImageCharacterF2EGif}
         alt=""
       />
       <img
-        className="absolute bottom-0 left-[50%] -ml-[56px] w-[112px]"
+        className="relative w-[118px] lg:w-auto lg:scale-105"
         src={ImageCharacterUIGif}
         alt=""
       />
       <img
-        className="absolute right-[10%] bottom-0 w-[112px]
-        "
+        className="relative w-[112px] lg:w-auto"
         src={ImageCharacterTeamGif}
         alt=""
       />
-    </div>
+    </>
   );
 }

@@ -24,7 +24,7 @@ export function H1({ as, className, ...props }) {
       as={as || "h1"}
       className={clsx(
         className,
-        "text-[20px] font-bold leading-normal md:text-[32px]"
+        "text-[20px] font-bold leading-normal lg:text-[32px]"
       )}
       // eslint-disable-next-line react/jsx-props-no-spreading
       {...props}
@@ -54,7 +54,7 @@ export function H3({ as, className, ...props }) {
       as={as || "h3"}
       className={clsx(
         className,
-        "text-[24px] font-bold leading-relaxed md:text-[44px] md:leading-normal"
+        "text-[24px] font-bold leading-relaxed md:text-[44px] lg:leading-normal"
       )}
       // eslint-disable-next-line react/jsx-props-no-spreading
       {...props}
@@ -84,7 +84,7 @@ export function H5({ as, className, ...props }) {
       as={as || "h5"}
       className={clsx(
         className,
-        "d:text-[24px] text-[18px] font-bold  leading-relaxed"
+        "text-[18px] font-bold leading-relaxed  md:text-[24px]"
       )}
       // eslint-disable-next-line react/jsx-props-no-spreading
       {...props}
@@ -92,14 +92,17 @@ export function H5({ as, className, ...props }) {
   );
 }
 
+// eslint-disable-next-line react/prop-types
 export function Strong({ as, className, ...props }) {
-  <Typography
-    as={as || "strong"}
-    className={clsx(
-      className,
-      "text-[18px] font-bold leading-relaxed md:text-[24px]"
-    )}
-    // eslint-disable-next-line react/jsx-props-no-spreading
-    {...props}
-  />;
+  return (
+    <Typography
+      as={as || "strong"}
+      className={clsx(
+        className,
+        "text-[18px] font-bold leading-relaxed lg:text-[24px]"
+      )}
+      // eslint-disable-next-line react/jsx-props-no-spreading
+      {...props}
+    />
+  );
 }

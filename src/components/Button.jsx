@@ -15,7 +15,7 @@ export const colors = {
 
 export const sizes = {
   md: "px-6 py-1 text-lg leading-loose",
-  lg: "px-7 py-2 text-xl",
+  lg: "px-7 py-2 text-xl md:text-[32px] md:leading-relaxed",
 };
 
 export default function Button({

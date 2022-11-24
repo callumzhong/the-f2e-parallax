@@ -6,7 +6,7 @@ export default function JoinButton({ isStay, isAnimation, className, href }) {
     <div className="group relative mx-auto mb-4 w-max">
       <div
         className={clsx(
-          "mx-auto h-[71px] w-[51px] bg-btn_joinHand bg-cover group-hover:opacity-100",
+          "mx-auto mb-1 h-[71px] w-[51px] bg-btn_joinHand bg-cover group-hover:opacity-100",
           {
             "opacity-0": !isStay,
             "animate-bounce": isAnimation,

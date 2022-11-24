@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer/Footer";
 
@@ -12,3 +13,10 @@ export default function Layout({ children }) {
     </>
   );
 }
+
+Layout.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.element),
+    PropTypes.element,
+  ]).isRequired,
+};

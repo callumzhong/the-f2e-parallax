@@ -12,9 +12,9 @@ export default function WeeklyStageItem({
 }) {
   return (
     <li className="text-center">
-      <img className="mb-2" src={image.path} alt="" />
-      <H2 className="mb-4 text-highlight">{weekly}</H2>
-      <H3 className="mb-4 text-primary">{title}</H3>
+      <img className="mx-auto mb-2 w-[200px]" src={image.path} alt="" />
+      <H2 className="mb-2 text-highlight">{weekly}</H2>
+      <H3 className="mb-5 whitespace-nowrap text-primary">{title}</H3>
       <div className="mx-auto flex w-max flex-col gap-4">
         <Button color="secondary" variant="outline">
           {subTitle}
@@ -22,7 +22,7 @@ export default function WeeklyStageItem({
         <Button color="secondary" variant="outline">
           {master}
         </Button>
-        <Button color="secondary" href={url}>
+        <Button className="font-medium" color="secondary" href={url}>
           查看關卡細節
         </Button>
       </div>
