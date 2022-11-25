@@ -4,6 +4,63 @@ import { H1 } from "../Typography";
 import ImageLogoText from "@/assets/logo/logo_text.png";
 import ActivityGroup from "./ActivityGroup";
 
+export function gsapAnimationHandler(gsap) {
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".hero-section__title",
+      markers: true,
+      start: "top 25%",
+      end: "top 0%",
+      scrub: true,
+    },
+  });
+
+  tl.set(".hero-section__text", { opacity: 0.5, duration: 1 }, 1)
+    .set(
+      ".hero-section__ready1",
+      {
+        opacity: 0,
+      },
+      1
+    )
+    .set(
+      ".hero-section__ready2",
+      {
+        opacity: 0,
+      },
+      1
+    )
+    .set(
+      ".hero-section__ready2",
+      {
+        opacity: 1,
+      },
+      5
+    )
+    .set(
+      ".hero-section__ready3",
+      {
+        opacity: 0,
+      },
+      5
+    )
+    .set(
+      ".hero-section__ready1",
+      {
+        opacity: 1,
+      },
+      10
+    )
+    .set(
+      ".hero-section__ready2",
+      {
+        opacity: 0,
+      },
+      10
+    )
+    .set(".hero-section__text", { text: "GO!" }, 10);
+}
+
 export default function Hero() {
   return (
     <section className="hero-section relative h-screen overflow-hidden pt-[59px] lg:pt-0">

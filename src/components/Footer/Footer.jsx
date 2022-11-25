@@ -2,6 +2,24 @@ import JoinButton from "../JoinButton";
 import { H5 } from "../Typography";
 import RaceTrack from "./RaceTrack";
 
+export function gsapAnimationHandler(gsap) {
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".footer-section",
+      markers: true,
+      start: "top 40%",
+      end: "top 10%",
+      scrub: true,
+    },
+  });
+
+  tl.to(".footer-section__race", {
+    maxHeight: "33.25vh",
+    maxWidth: "900px",
+    duration: 10,
+  });
+}
+
 export default function Footer() {
   return (
     <footer className="footer-section fixed inset-x-0 bottom-0 flex justify-center px-5">
