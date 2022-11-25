@@ -4,7 +4,10 @@ import { H1 } from "../Typography";
 import ImageLogoText from "@/assets/logo/logo_text.png";
 import ActivityGroup from "./ActivityGroup";
 
-export function gsapAnimationHandler(gsap) {
+/**
+ * 使用 gasp 處理 hero 區塊的動畫
+ */
+export function heroAnimationHandler(gsap) {
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: ".hero-section__title",

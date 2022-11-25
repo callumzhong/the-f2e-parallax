@@ -1,4 +1,4 @@
-import Footer from "./Footer";
+import Footer, { footerAnimationHandler } from "./Footer";
 
-export * from "./Footer";
+export { footerAnimationHandler };
 export default Footer;

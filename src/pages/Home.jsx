@@ -5,11 +5,9 @@ import TextPlugin from "gsap/TextPlugin";
 import Award from "@/components/Award";
 import Cooperation from "@/components/Cooperation";
 import Finish from "@/components/Finish";
-import Hero, {
-  gsapAnimationHandler as heroGsapAnimationHandler,
-} from "@/components/Hero";
+import Hero, { heroAnimationHandler } from "@/components/Hero";
 
-import { gsapAnimationHandler as footerGsapAnimationHandler } from "@/components/Footer";
+import { footerAnimationHandler } from "@/components/Footer";
 import Question from "@/components/Question";
 import Schedule from "@/components/Schedule";
 import Sponsor from "@/components/Sponsor";
@@ -23,8 +21,8 @@ export default function HomePage() {
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      heroGsapAnimationHandler(gsap);
-      footerGsapAnimationHandler(gsap);
+      heroAnimationHandler(gsap);
+      footerAnimationHandler(gsap);
     }, layoutRef);
 
     return () => ctx.revert();
