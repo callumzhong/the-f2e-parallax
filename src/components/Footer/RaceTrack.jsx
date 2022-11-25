@@ -10,7 +10,7 @@ export function raceAnimationHandler(tl) {
   tl.to(".footer-section__race", {
     maxHeight: "33.25vh",
     maxWidth: "900px",
-    duration: 10,
+    duration: 50,
   });
 }
 

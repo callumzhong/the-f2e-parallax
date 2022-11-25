@@ -1,3 +1,4 @@
+import { logoAnimationHandler } from "../Header";
 import Join from "./Join";
 import Map, { mapAnimationHandler } from "./Map";
 import RaceTrack, { raceAnimationHandler } from "./RaceTrack";
@@ -14,6 +15,7 @@ export function footerAnimationHandler(gsap) {
   });
   raceAnimationHandler(tl);
   mapAnimationHandler(tl);
+  logoAnimationHandler(tl);
 }
 
 export default function Footer() {
