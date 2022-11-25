@@ -2,3 +2,10 @@
   border-image: url("@/assets/bg/bg_talking_c.png");
   border-image-slice: 1 fill;
 }
+
+@media (min-width: theme(screens.lg)) {
+  .title {
+    border-image: none;
+    @apply mx-auto w-[736px] bg-talking bg-center bg-no-repeat;
+  }
+} ;

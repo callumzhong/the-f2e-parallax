@@ -1,5 +1,5 @@
 import ImageLogo from "@/assets/logo/logo.png";
-import HeroDecorate from "./HeroDecorate";
+import Decorate from "./Decorate";
 import { H1 } from "../Typography";
 import ImageLogoText from "@/assets/logo/logo_text.png";
 import ActivityGroup from "./ActivityGroup";
@@ -66,7 +66,7 @@ export function heroAnimationHandler(gsap) {
 
 export default function Hero() {
   return (
-    <section className="hero-section relative h-screen overflow-hidden pt-[59px] lg:pt-0">
+    <section className="hero-section relative h-screen overflow-hidden pb-[207px] pt-[59px] lg:pb-[52vh] lg:pt-0">
       <div className="hero-section__logo mx-auto mt-8 mb-3 w-[253px] lg:h-[23vh] lg:w-auto">
         <img className="lg:hidden" src={ImageLogo} alt="THE F2E" />
         <img
@@ -81,7 +81,7 @@ export default function Hero() {
         </H1>
         <ActivityGroup />
       </div>
-      <HeroDecorate />
+      <Decorate />
     </section>
   );
 }

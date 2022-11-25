@@ -3,7 +3,7 @@ import QuestionItem from "./QuestionItem";
 
 export default function QuestionList({ items }) {
   return (
-    <ul className="mx-auto flex flex-col flex-wrap items-center gap-4 px-5 md:w-[61.97%] md:px-0">
+    <ul className="mx-auto flex flex-col flex-wrap items-center gap-4 px-5 md:w-[61.97%] lg:w-full lg:flex-row lg:gap-0">
       {items.map((item) => (
         <QuestionItem
           key={item.id}

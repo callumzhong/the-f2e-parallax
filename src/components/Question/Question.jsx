@@ -5,6 +5,7 @@ import ImageQuestion2 from "@/assets/main/question_2.png";
 import ImageQuestionMobile3 from "@/assets/main/question_3_m.png";
 import ImageQuestion3 from "@/assets/main/question_3.png";
 import QuestionList from "./QuestionList";
+import Decorate from "./Decorate";
 
 const items = [
   {
@@ -36,9 +37,10 @@ const items = [
 
 export default function Question() {
   return (
-    <section className="relative w-full pt-[59px] pb-[200px]">
+    <section className="relative w-full pt-[59px] pb-[207px] lg:pb-[35.25vh]">
       <Title>你是否也有以下困擾？</Title>
       <QuestionList items={items} />
+      <Decorate />
     </section>
   );
 }

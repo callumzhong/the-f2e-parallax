@@ -3,7 +3,7 @@ import ImageReady1 from "@/assets/main/ready_1.png";
 import ImageReady2 from "@/assets/main/ready_2.png";
 import ImageReady3 from "@/assets/main/ready_3.png";
 
-export default function HeroDecorate() {
+export default function Decorate() {
   return (
     <>
       <div className="absolute top-2/3 -left-6 -z-10 -mt-14 h-[73px] w-[113px] -translate-y-1/2 bg-decorate_01 bg-cover lg:left-24 lg:h-[280px] lg:w-[430px]" />
