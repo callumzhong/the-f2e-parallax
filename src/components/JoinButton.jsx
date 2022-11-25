@@ -16,7 +16,12 @@ export default function JoinButton({ isStay, isAnimation, className, href }) {
       />
       <div className="h-[60px] w-[103px] bg-btn_join bg-cover" />
       {href && (
-        <a href={href} className="absolute inset-0 opacity-0">
+        <a
+          href={href}
+          target="_blank"
+          className="absolute inset-0 opacity-0"
+          rel="noreferrer"
+        >
           {href}
         </a>
       )}

@@ -8,17 +8,17 @@ export default function RaceTrack() {
     <>
       <img className="absolute inset-x-0 bottom-0" src={ImageRoad} alt="" />
       <img
-        className="relative w-[112px] lg:w-auto"
+        className="relative w-[112px] lg:h-full lg:w-auto"
         src={ImageCharacterF2EGif}
         alt=""
       />
       <img
-        className="relative w-[118px] lg:w-auto lg:scale-105"
+        className="relative w-[118px] lg:h-full lg:w-auto lg:scale-105"
         src={ImageCharacterUIGif}
         alt=""
       />
       <img
-        className="relative w-[112px] lg:w-auto"
+        className="relative w-[112px] lg:h-full lg:w-auto"
         src={ImageCharacterTeamGif}
         alt=""
       />

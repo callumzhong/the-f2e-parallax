@@ -3,7 +3,7 @@ import UserBadges from "../UserBadges";
 
 export default function ActivityGroup() {
   return (
-    <ul className="absolute inset-x-0 -top-4 flex -translate-y-full flex-col items-center gap-4 text-center text-primary lg:-ml-12 lg:flex-row lg:justify-center lg:gap-44">
+    <ul className="flex flex-col items-center gap-4 text-center text-primary lg:-ml-12 lg:flex-row lg:justify-center lg:gap-44">
       <li>
         <H4 className="mb-2 md:text-[20px]">前端工程師</H4>
         <UserBadges>920</UserBadges>

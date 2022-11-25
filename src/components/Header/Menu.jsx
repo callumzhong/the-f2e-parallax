@@ -48,15 +48,15 @@ export default function Menu() {
   return (
     <>
       <input
-        className="peer absolute -left-[9999px]"
+        className="peer absolute -left-[9999px] opacity-0"
         type="checkbox"
         name="menu-checkbox"
         id="menu-checkbox"
       />
-      <div className="absolute top-0 left-0 min-h-screen -translate-x-full bg-primary p-10 duration-300 ease-in-out peer-checked:translate-x-0">
+      <div className="absolute top-0 left-0 min-h-screen -translate-x-full bg-primary p-10 duration-300 ease-in-out peer-checked:left-0 peer-checked:translate-x-0 lg:left-4">
         <label
           htmlFor="menu-checkbox"
-          className="absolute top-3 -right-10 block h-11 w-10 cursor-pointer bg-btn-burger-open bg-cover text-transparent hover:bg-btn-burger-open-hover active:bg-btn-burger-open-pressed"
+          className="absolute top-3 -right-10 block h-11 w-10 cursor-pointer bg-btn-burger-open bg-cover text-transparent hover:bg-btn-burger-open-hover active:bg-btn-burger-open-pressed lg:top-1/2 lg:-translate-y-full"
         >
           menu
         </label>
