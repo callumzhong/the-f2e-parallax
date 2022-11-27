@@ -1,4 +1,6 @@
-import Footer, { footerAnimationHandler } from "./Footer";
+import Footer from "./Footer";
+import { mapAnimation } from "./Map";
+import { raceAnimation } from "./RaceTrack";
 
-export { footerAnimationHandler };
+export { mapAnimation, raceAnimation };
 export default Footer;

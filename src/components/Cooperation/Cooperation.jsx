@@ -31,7 +31,7 @@ const items = [
 
 export default function Cooperation() {
   return (
-    <section className="relative w-full pt-[59px] pb-[200px]">
+    <section className="relative w-full pt-[59px] pb-[207px] lg:pb-[55.30vh]">
       <Title>本屆主題：互動式網頁設計？</Title>
       <H5 className="-mt-10 mb-10 text-center text-secondary-dark">
         以下兩個角色進行攜手合作

@@ -7,7 +7,6 @@ import Cooperation from "@/components/Cooperation";
 import Finish from "@/components/Finish";
 import Hero, { heroAnimationHandler } from "@/components/Hero";
 
-import { footerAnimationHandler } from "@/components/Footer";
 import Question from "@/components/Question";
 import Schedule from "@/components/Schedule";
 import Sponsor from "@/components/Sponsor";
@@ -22,7 +21,6 @@ export default function HomePage() {
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
       heroAnimationHandler(gsap);
-      footerAnimationHandler(gsap);
     }, layoutRef);
 
     return () => ctx.revert();

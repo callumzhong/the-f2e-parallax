@@ -1,12 +1,14 @@
 import ImageLogoText from "@/assets/logo/logo_text.png";
 import ImageLogo from "@/assets/logo/logo.png";
 
-export function logoAnimationHandler(tl) {
-  tl.to(".header-section__logo", {
-    opacity: 1,
-    duration: 50,
-  });
-}
+export const logoAnimation = {
+  hero: (tl) => {
+    tl.to(".header-section__logo", {
+      opacity: 1,
+      duration: 50,
+    });
+  },
+};
 
 export default function Logo() {
   return (

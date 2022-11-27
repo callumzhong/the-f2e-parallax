@@ -35,6 +35,25 @@ const items = [
   },
 ];
 
+/**
+ * 使用 gasp 處理 hero 區塊的動畫
+ */
+export function heroAnimationHandler(gsap) {
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".hero-section__title",
+      markers: true,
+      start: "top 25%",
+      end: "top 0%",
+      scrub: true,
+    },
+  });
+
+  raceAnimation.hero(tl);
+  mapAnimation.hero(tl);
+  logoAnimation.hero(tl);
+}
+
 export default function Question() {
   return (
     <section className="relative w-full pt-[59px] pb-[207px] lg:pb-[35.25vh]">

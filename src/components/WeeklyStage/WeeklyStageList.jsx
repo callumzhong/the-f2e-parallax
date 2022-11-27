@@ -4,7 +4,7 @@ import WeeklyStageItem from "./WeeklyStageItem";
 export default function WeeklyStageList({ items }) {
   return (
     <ul className="flex flex-col gap-11">
-      {items.map((item) => (
+      {items.map((item, idx) => (
         <WeeklyStageItem
           key={item.id}
           image={item.image}
@@ -13,6 +13,7 @@ export default function WeeklyStageList({ items }) {
           title={item.title}
           url={item.url}
           weekly={item.weekly}
+          isReverse={idx % 2 !== 0}
         />
       ))}
     </ul>

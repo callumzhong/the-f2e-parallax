@@ -1,5 +1,5 @@
 import Header from "./Header";
+import { logoAnimation } from "./Logo";
 
-export { logoAnimationHandler } from "./Logo";
-
+export { logoAnimation };
 export default Header;

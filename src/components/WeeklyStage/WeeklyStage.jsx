@@ -37,13 +37,13 @@ const items = [
 
 export default function WeeklyStage() {
   return (
-    <section className="relative w-full pt-[59px] pb-[200px]">
+    <section className="relative w-full pt-[59px] pb-[200px] lg:pb-[21.76vh]">
       <Title>年度最強合作，三大主題來襲</Title>
       <H5 className="-mt-10 mb-10 text-center text-secondary-dark">
         各路廠商強強聯手 <br />
         共同設計出接地氣的網頁互動挑戰關卡
       </H5>
-      <div className="mx-auto px-5 md:w-[61.97%]">
+      <div className="mx-auto px-5 md:w-[61.97%] lg:w-full lg:max-w-[1180px]">
         <WeeklyStageList items={items} />
       </div>
     </section>

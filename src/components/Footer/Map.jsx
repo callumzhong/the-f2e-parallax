@@ -1,18 +1,19 @@
 import ImageMap from "@/assets/main/map.svg";
 import ImageMapNow from "@/assets/main/map_now.gif";
 
-export function mapAnimationHandler(tl) {
-  // 第二站
-  tl.to(".footer-section__map-now", {
-    left: 16,
-    top: 20,
-    duration: 10,
-  }).to(".footer-section__map-now", {
-    left: 44,
-    top: 2,
-    duration: 20,
-  });
-}
+export const mapAnimation = {
+  hero: (tl) => {
+    tl.to(".footer-section__map-now", {
+      left: 16,
+      top: 20,
+      duration: 10,
+    }).to(".footer-section__map-now", {
+      left: 44,
+      top: 2,
+      duration: 20,
+    });
+  },
+};
 
 export default function Map() {
   return (

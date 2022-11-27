@@ -3,6 +3,8 @@ import Decorate from "./Decorate";
 import { H1 } from "../Typography";
 import ImageLogoText from "@/assets/logo/logo_text.png";
 import ActivityGroup from "./ActivityGroup";
+import { raceAnimation, mapAnimation } from "../Footer";
+import { logoAnimation } from "../Header";
 
 /**
  * 使用 gasp 處理 hero 區塊的動畫
@@ -17,6 +19,10 @@ export function heroAnimationHandler(gsap) {
       scrub: true,
     },
   });
+
+  raceAnimation.hero(tl);
+  mapAnimation.hero(tl);
+  logoAnimation.hero(tl);
 
   tl.set(".hero-section__text", { opacity: 0.5, duration: 1 }, 1)
     .set(

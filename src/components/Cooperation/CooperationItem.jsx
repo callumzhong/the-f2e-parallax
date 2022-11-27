@@ -11,11 +11,11 @@ export default function CooperationItem({ id, title, image, isReverse }) {
       })}
       key={id}
     >
-      <div className="w-1/2">
+      <div className="w-1/2 lg:w-full">
         <JoinButton href="google" className="mb-4" />
         <H4 className="whitespace-nowrap text-center text-primary">{title}</H4>
       </div>
-      <div className="w-1/2">
+      <div className="w-1/2 lg:hidden">
         <img src={image.path} alt="" />
       </div>
     </li>
