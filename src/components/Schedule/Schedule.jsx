@@ -4,10 +4,12 @@ import Title from "@/components/Title/Title";
 import JoinButton from "../JoinButton";
 import { H2, H5 } from "../Typography";
 import ScheduleList from "./ScheduleList";
+import ImageDateWeekLine from "@/assets/main/date_weekLine.png";
 
 const items = [
   {
     id: "schedule-1",
+    className: "lg:-mt-10",
     title: "SIGN UP",
     timeline: "10/13 - 11/6",
     image: {
@@ -56,9 +58,9 @@ const items = [
 export default function Schedule() {
   return (
     <section className="relative w-full pt-[59px]">
-      <Title>重要時程</Title>
+      <Title className="lg:hidden">重要時程</Title>
       <ScheduleList items={items} />
-      <H2 className="pt-[228px] pb-[252px] text-center text-highlight md:text-[28px]">
+      <H2 className="pt-[228px] pb-[252px] text-center text-highlight md:text-[28px] lg:pt-[40.52vh] lg:text-[60px]">
         區區修煉
         <br />
         已經無法滿足了嗎？

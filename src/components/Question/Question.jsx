@@ -6,6 +6,7 @@ import ImageQuestionMobile3 from "@/assets/main/question_3_m.png";
 import ImageQuestion3 from "@/assets/main/question_3.png";
 import QuestionList from "./QuestionList";
 import Decorate from "./Decorate";
+import { raceAnimation } from "../Footer";
 
 const items = [
   {
@@ -35,28 +36,23 @@ const items = [
   },
 ];
 
-/**
- * 使用 gasp 處理 hero 區塊的動畫
- */
-export function heroAnimationHandler(gsap) {
+export function questionAnimationHandler(gsap) {
   const tl = gsap.timeline({
     scrollTrigger: {
-      trigger: ".hero-section__title",
+      trigger: ".question-section",
       markers: true,
-      start: "top 25%",
-      end: "top 0%",
+      start: "top top",
+      end: "+=800",
       scrub: true,
     },
   });
 
-  raceAnimation.hero(tl);
-  mapAnimation.hero(tl);
-  logoAnimation.hero(tl);
+  raceAnimation.question(tl);
 }
 
 export default function Question() {
   return (
-    <section className="relative w-full pt-[59px] pb-[207px] lg:pb-[35.25vh]">
+    <section className="question-section relative w-full pt-[59px] pb-[207px] lg:pb-[35.25vh]">
       <Title>你是否也有以下困擾？</Title>
       <QuestionList items={items} />
       <Decorate />

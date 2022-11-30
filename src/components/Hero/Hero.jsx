@@ -12,7 +12,7 @@ import { logoAnimation } from "../Header";
 export function heroAnimationHandler(gsap) {
   const tl = gsap.timeline({
     scrollTrigger: {
-      trigger: ".hero-section__title",
+      trigger: ".hero-section__text",
       markers: true,
       start: "top 25%",
       end: "top 0%",

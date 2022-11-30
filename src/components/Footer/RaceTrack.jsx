@@ -25,6 +25,13 @@ export const raceAnimation = {
       duration: 50,
     });
   },
+  schedule: (tl) => {
+    tl.to(".footer-section__race", {
+      maxHeight: "40.52vh",
+      maxWidth: "1100px",
+      duration: 50,
+    });
+  },
 };
 
 export default function RaceTrack() {

@@ -12,6 +12,8 @@ import Schedule from "@/components/Schedule";
 import Sponsor from "@/components/Sponsor";
 import WeeklyStage from "@/components/WeeklyStage";
 import Layout from "./Layout";
+import { questionAnimationHandler } from "@/components/Question/Question";
+import { cooperationAnimationHandler } from "@/components/Cooperation/Cooperation";
 
 gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
@@ -21,6 +23,8 @@ export default function HomePage() {
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
       heroAnimationHandler(gsap);
+      questionAnimationHandler(gsap);
+      cooperationAnimationHandler(gsap);
     }, layoutRef);
 
     return () => ctx.revert();
