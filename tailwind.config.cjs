@@ -57,6 +57,12 @@ module.exports = {
           800: "#333333",
         },
       },
+      container: {
+        center: true,
+        padding: {
+          DEFAULT: "1.25rem",
+        },
+      },
     },
   },
   plugins: [],

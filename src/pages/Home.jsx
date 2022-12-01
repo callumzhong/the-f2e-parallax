@@ -3,6 +3,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import TextPlugin from "gsap/TextPlugin";
 import Layout from "./Layout";
+import Kanban from "@/components/Kanban";
 
 gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
@@ -13,5 +14,10 @@ export default function HomePage() {
     const ctx = gsap.context(() => {}, layoutRef);
     return () => ctx.revert();
   }, [layoutRef]);
-  return <Layout ref={layoutRef} />;
+
+  return (
+    <Layout ref={layoutRef}>
+      <Kanban />
+    </Layout>
+  );
 }

@@ -2,8 +2,8 @@ import clsx from "clsx";
 import PropTypes from "prop-types";
 
 export const variants = {
-  fill: "rounded-full inline-block font-bold",
-  outline: "rounded-full border-2 inline-block font-bold",
+  fill: "rounded-full font-bold",
+  outline: "rounded-full border-2 font-bold",
 };
 
 export const colors = {
@@ -11,6 +11,7 @@ export const colors = {
   "secondary-fill": "bg-secondary-dark rounded-full text-white",
   "secondary-outline":
     "border-secondary-dark rounded-full border-2 text-secondary-dark",
+  "highlight-fill": "bg-highlight text-white rounded-full",
 };
 
 export const sizes = {
@@ -29,10 +30,10 @@ export default function Button({
   target,
 }) {
   const classes = clsx(
+    className,
     variants[variant],
     colors[`${color}-${variant}`],
-    sizes[size],
-    className
+    sizes[size]
   );
 
   if (!onClick && !href) {

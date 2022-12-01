@@ -4,7 +4,7 @@ import ImageTalkingLeft from "@/assets/bg/bg_talking_l.png";
 import ImageTalkingCenter from "@/assets/bg/bg_talking_c.png";
 import ImageTalkingRight from "@/assets/bg/bg_talking_r.png";
 
-export default function Title({ children, className }) {
+export default function TitleSection({ children, className }) {
   return (
     <div
       className={clsx(
@@ -32,11 +32,11 @@ export default function Title({ children, className }) {
   );
 }
 
-Title.defaultProps = {
+TitleSection.defaultProps = {
   className: null,
 };
 
-Title.propTypes = {
+TitleSection.propTypes = {
   className: PropTypes.string,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),

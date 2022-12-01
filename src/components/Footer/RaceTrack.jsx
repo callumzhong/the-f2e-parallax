@@ -36,20 +36,20 @@ export const raceAnimation = {
 
 export default function RaceTrack() {
   return (
-    <div className="footer-section__race relative flex w-full justify-center pb-4 md:w-[45.44vw] lg:max-h-[52.01vh] lg:w-full lg:max-w-[1175px] lg:gap-6">
+    <div className="footer-section__race relative flex translate-x-8 justify-center  px-5 md:w-[349px] xl:h-[50.48vh] xl:max-h-[517px] xl:w-[1175px] 2xl:h-[55.64vh] 2xl:max-h-[601px]">
       <img className="absolute inset-x-0 bottom-0" src={ImageRoad} alt="" />
       <img
-        className="relative w-[112px] lg:h-full lg:w-auto"
+        className="relative w-[112.35px] xl:h-full xl:w-auto 2xl:bottom-4"
         src={ImageCharacterF2EGif}
         alt=""
       />
       <img
-        className="relative w-[118px] lg:h-full lg:w-auto lg:scale-105"
+        className="relative w-[118.49px] xl:bottom-[15px] xl:h-full xl:w-auto 2xl:bottom-[27px]"
         src={ImageCharacterUIGif}
         alt=""
       />
       <img
-        className="relative w-[112px] lg:h-full lg:w-auto"
+        className="relative w-[112.35px] xl:h-full xl:w-auto 2xl:bottom-[9px]"
         src={ImageCharacterTeamGif}
         alt=""
       />
