@@ -4,6 +4,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import TextPlugin from "gsap/TextPlugin";
 import Layout from "./Layout";
 import Kanban from "@/components/Kanban";
+import Question from "@/components/Question";
 
 gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
@@ -18,6 +19,7 @@ export default function HomePage() {
   return (
     <Layout ref={layoutRef}>
       <Kanban />
+      <Question />
     </Layout>
   );
 }

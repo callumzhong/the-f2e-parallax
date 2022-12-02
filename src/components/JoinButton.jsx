@@ -1,24 +1,31 @@
 import clsx from "clsx";
 import propTypes from "prop-types";
+import ImageBtnJoinHead from "@/assets/btn/btn_joinHand.png";
+import ImageBtnJoin from "@/assets/btn/btn_join.png";
+import ImageBtnJoinHover from "@/assets/btn/btn_join_h.png";
 
 export default function JoinButton({ isStay, isAnimation, className, href }) {
   return (
-    <div className="group relative mx-auto mb-4 w-max">
-      <div
+    <div className={clsx("group relative mx-auto", className)}>
+      <img
         className={clsx(
-          "mx-auto mb-1 h-[71px] w-[51px] bg-btn_joinHand bg-cover group-hover:opacity-100",
-          {
-            "opacity-0": !isStay,
-            "animate-bounce": isAnimation,
-          },
-          className
+          "mx-auto mb-[2.67px] w-[55.35%] group-hover:translate-y-[40%]",
+          !isStay && "opacity-0",
+          isAnimation && "animate-bounce group-hover:animate-none"
         )}
+        src={ImageBtnJoinHead}
+        alt=""
       />
-      <div className="h-[60px] w-[103px] bg-btn_join bg-cover" />
+      <img className="mx-auto group-hover:hidden" src={ImageBtnJoin} alt="" />
+      <img
+        className="mx-auto hidden group-hover:block"
+        src={ImageBtnJoinHover}
+        alt=""
+      />
       {href && (
         <a
-          href={href}
           target="_blank"
+          href={href}
           className="absolute inset-0 opacity-0"
           rel="noreferrer"
         >

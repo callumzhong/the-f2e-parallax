@@ -8,7 +8,7 @@ export default function TitleSection({ children, className }) {
   return (
     <div
       className={clsx(
-        "relative mt-6 mb-10 h-[72px] text-center text-2xl font-bold leading-normal text-primary lg:mx-auto lg:h-[151px] lg:w-max lg:text-6xl",
+        "relative flex items-center justify-center text-2xl font-bold text-primary lg:w-max xl:mx-auto xl:text-6xl",
         className
       )}
     >
@@ -27,7 +27,7 @@ export default function TitleSection({ children, className }) {
         src={ImageTalkingRight}
         alt=""
       />
-      <p className="relative top-[60%] -translate-y-full">{children}</p>
+      <p className="relative -mt-4">{children}</p>
     </div>
   );
 }

@@ -36,7 +36,8 @@ export const raceAnimation = {
 
 export default function RaceTrack() {
   return (
-    <div className="footer-section__race relative flex translate-x-8 justify-center  px-5 md:w-[349px] xl:h-[50.48vh] xl:max-h-[517px] xl:w-[1175px] 2xl:h-[55.64vh] 2xl:max-h-[601px]">
+    // Kanban
+    <div className="footer-section__race relative flex justify-center px-5 md:w-[349px] xl:h-[min(50.48vh,517px)] xl:w-[min(81.60vw,1175px)] xl:translate-x-4 2xl:h-[min(55.64vh,601px)]">
       <img className="absolute inset-x-0 bottom-0" src={ImageRoad} alt="" />
       <img
         className="relative w-[112.35px] xl:h-full xl:w-auto 2xl:bottom-4"
@@ -54,5 +55,23 @@ export default function RaceTrack() {
         alt=""
       />
     </div>
+    // <div className="footer-section__race relative bottom-0 flex w-[164px] items-end justify-center md:w-[277px] xl:w-[min(62.5vw,900px)]">
+    //   <img className="absolute inset-x-0 bottom-0" src={ImageRoad} alt="" />
+    //   <img
+    //     className="relative w-[52.79px] xl:h-[min(35.74vh,366px)] xl:w-auto 2xl:bottom-4"
+    //     src={ImageCharacterF2EGif}
+    //     alt=""
+    //   />
+    //   <img
+    //     className="relative w-[55.68px] xl:bottom-[min(2.25vh,23px)] xl:h-[min(35.74vh,366px)]  xl:w-auto 2xl:bottom-[27px]"
+    //     src={ImageCharacterUIGif}
+    //     alt=""
+    //   />
+    //   <img
+    //     className="relative w-[52.79px] xl:bottom-[min(1.17vh,12px)] xl:h-[min(31.35vh,321px)] xl:w-auto 2xl:bottom-[9px]"
+    //     src={ImageCharacterTeamGif}
+    //     alt=""
+    //   />
+    // </div>
   );
 }
