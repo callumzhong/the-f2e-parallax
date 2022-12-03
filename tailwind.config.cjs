@@ -8,6 +8,104 @@ module.exports = {
       loose: "1.6",
     },
     extend: {
+      fontSize: {
+        "mobile-h1": [
+          "1.25rem",
+          {
+            fontWeight: "700",
+            lineHeight: "1.5rem",
+            letterSpacing: "0.05em",
+          },
+        ],
+        "mobile-h2": [
+          "1.75rem",
+          {
+            fontWeight: "700",
+            lineHeight: "2.25rem",
+            letterSpacing: "0.05em",
+          },
+        ],
+        "mobile-h3": [
+          "1.5rem",
+          {
+            fontWeight: "700",
+            lineHeight: "2rem",
+            letterSpacing: "0.05em",
+          },
+        ],
+        "mobile-h4": [
+          "1.25rem",
+          {
+            fontWeight: "700",
+            lineHeight: "1.75rem",
+            letterSpacing: "0.05em",
+          },
+        ],
+        "mobile-h5": [
+          "1.125rem",
+          {
+            fontWeight: "700",
+            lineHeight: "1.75rem",
+            letterSpacing: "0.05em",
+          },
+        ],
+        "mobile-highlight": [
+          "1.125rem",
+          {
+            fontWeight: "700",
+            lineHeight: "1.5rem",
+            letterSpacing: "0.05em",
+          },
+        ],
+        "desktop-h1": [
+          "2rem",
+          {
+            fontWeight: "700",
+            lineHeight: "2.5rem",
+            letterSpacing: "0.02em",
+          },
+        ],
+        "desktop-h2": [
+          "3.75rem",
+          {
+            fontWeight: "700",
+            lineHeight: "4.75rem",
+            letterSpacing: "0.02em",
+          },
+        ],
+        "desktop-h3": [
+          "2.75rem",
+          {
+            fontWeight: "700",
+            lineHeight: "3.5rem",
+            letterSpacing: "0.02em",
+          },
+        ],
+        "desktop-h4": [
+          "2rem",
+          {
+            fontWeight: "700",
+            lineHeight: "2.75rem",
+            letterSpacing: "0.02em",
+          },
+        ],
+        "desktop-h5": [
+          "1.5rem",
+          {
+            fontWeight: "700",
+            lineHeight: "2rem",
+            letterSpacing: "0.02em",
+          },
+        ],
+        "desktop-highlight": [
+          "1.5rem",
+          {
+            fontWeight: "700",
+            lineHeight: "2rem",
+            letterSpacing: "0.02em",
+          },
+        ],
+      },
       backgroundImage: {
         "btn-user": "url('@/assets/btn/btn_user.png')",
         "btn-user-hover": "url('@/assets/btn/btn_user_h.png')",
