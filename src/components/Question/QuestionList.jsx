@@ -28,7 +28,7 @@ export default function QuestionList() {
         <picture>
           <source media="(min-width:1024px)" srcSet={ImageQuestion1} />
           <img
-            className="xl:h-[min(40.23vh,25.75rem)] xl:w-full"
+            className="xl:h-[min(40.23vh,25.75rem)] 2xl:h-[min(38.15vh,25.75rem)]"
             src={ImageQuestionMobile1}
             alt=""
           />
@@ -37,7 +37,7 @@ export default function QuestionList() {
       <li className="xl:w-1/3 xl:px-[0.625rem] 2xl:w-[28.5419rem]">
         <Title>滿足不了同事的許願？</Title>
         <img
-          className="xl:h-[min(40.23vh,25.75rem)] xl:w-full"
+          className="xl:h-[min(40.23vh,25.75rem)] 2xl:h-[min(38.15vh,25.75rem)]"
           src={ImageQuestion2}
           alt=""
         />
@@ -47,7 +47,7 @@ export default function QuestionList() {
         <picture>
           <source media="(min-width:1024px)" srcSet={ImageQuestion3} />
           <img
-            className="xl:h-[min(40.23vh,25.75rem)] xl:max-h-[25.75rem] xl:w-full"
+            className="xl:h-[min(40.23vh,25.75rem)] 2xl:h-[min(38.15vh,25.75rem)]"
             src={ImageQuestionMobile3}
             alt=""
           />

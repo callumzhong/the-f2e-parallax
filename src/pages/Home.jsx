@@ -6,6 +6,7 @@ import Layout from "./Layout";
 import Kanban from "@/components/Kanban";
 import Question from "@/components/Question";
 import Cooperation from "@/components/Cooperation";
+import Schedule from "@/components/Schedule";
 
 gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
@@ -20,8 +21,9 @@ export default function HomePage() {
   return (
     <Layout ref={layoutRef}>
       <Kanban />
-      {/* <Question />
-      <Cooperation /> */}
+      <Question />
+      <Cooperation />
+      <Schedule />
     </Layout>
   );
 }

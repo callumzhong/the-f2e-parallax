@@ -162,12 +162,12 @@ module.exports = {
         },
       },
       animation: {
-        "bounce-reverse": "bounce-reverse 1s infinite",
+        "bounce-small": "bounce-small 1s infinite",
       },
       keyframes: {
-        "bounce-reverse": {
+        "bounce-small": {
           "0%, 100%": {
-            transform: "translateY(25%)",
+            transform: "translateY(-15%)",
             "animation-timing-function": "cubic-bezier(0.8, 0, 1, 1)",
           },
           "50%": {

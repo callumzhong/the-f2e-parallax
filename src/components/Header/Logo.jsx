@@ -19,7 +19,7 @@ export default function Logo() {
         alt="THE F2E"
       />
       <img
-        className="header-section__logo hidden h-[min(14.54vh,148.91px)]"
+        className="header-section__logo hidden xl:block xl:h-[min(14.54vh,9.3069rem)] 2xl:h-[min(13.79vh,9.3069rem)]"
         src={ImageLogo}
         alt="THE F2E"
       />

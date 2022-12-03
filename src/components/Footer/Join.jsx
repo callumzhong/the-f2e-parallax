@@ -4,11 +4,11 @@ export default function Join() {
   return (
     // index
     <div className="absolute right-5 bottom-5 hidden text-center lg:block">
-      <p className="mb-6 text-sm text-primary md:text-2xl md:leading-[2.125rem]">
+      <p className="mb-1 text-sm text-primary xl:text-2xl xl:leading-[2.125rem]">
         JOIN
       </p>
       <JoinButton
-        className="w-10 xl:w-[103px]"
+        className="w-10 xl:h-[min(12.01vh,10.8125rem)] xl:w-[103px] 2xl:h-[min(16.02vh,10.8125rem)]"
         href="https://2022.thef2e.com/signup"
         isStay
         isAnimation

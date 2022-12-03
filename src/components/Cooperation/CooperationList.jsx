@@ -25,21 +25,21 @@ export default function CooperationList() {
       <li className="flex items-center gap-5 xl:w-1/3 xl:justify-center">
         <img className="w-1/2 xl:hidden" src={ImageCharacterF2E} alt="" />
         <div className="w-1/2 xl:w-auto">
-          <JoinButton className="mx-auto  mb-4 w-[6.4375rem]" />
+          <JoinButton className="mx-auto mb-4 h-[8.4375rem] w-[6.4375rem] xl:h-[min(13.19vh,8.4375rem)]" />
           <Title>前端工程師</Title>
         </div>
       </li>
       <li className="flex flex-row-reverse items-center gap-5 xl:w-1/3 xl:justify-center">
         <img className="w-1/2 xl:hidden" src={ImageCharacterUI} alt="" />
         <div className="w-1/2 xl:w-auto">
-          <JoinButton className="mx-auto  mb-4 w-[6.4375rem]" />
+          <JoinButton className="mx-auto  mb-4 h-[8.4375rem] w-[6.4375rem] xl:h-[min(13.19vh,8.4375rem)]" />
           <Title>UI設計師</Title>
         </div>
       </li>
       <li className="flex items-center gap-5 xl:w-1/3 xl:justify-center">
         <img className="w-1/2 xl:hidden" src={ImageCharacterTeam} alt="" />
         <div className="w-1/2 xl:w-auto">
-          <JoinButton className="mx-auto  mb-4 w-[6.4375rem]" />
+          <JoinButton className="mx-auto mb-4 h-[8.4375rem] w-[6.4375rem] xl:h-[min(13.19vh,8.4375rem)]" />
           <Title>團隊組(UI+前端)</Title>
         </div>
       </li>
