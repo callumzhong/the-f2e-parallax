@@ -1,7 +1,7 @@
 import TitleSection from "../TitleSection/TitleSection";
-import ScheduleList from "./ScheduleList";
+import WeekList from "./WeekList";
 
-export default function Schedule() {
+export default function Week() {
   return (
     <section className="pb-[3.8037rem] xl:min-h-screen xl:pt-[min(3.91vh,2.5rem)] xl:pb-[19.875rem]">
       <TitleSection className="mb-1 h-[4.5rem] text-center xl:h-[min(14.75vh,9.4375rem)]  ">
@@ -13,7 +13,7 @@ export default function Schedule() {
         共同設計出接地氣的網頁互動挑戰關卡
       </p>
       <div className="mx-auto px-5 xl:w-[min(81.94vw,73.75rem)] 2xl:w-[min(74.9vw,89.875rem)]">
-        <ScheduleList />
+        <WeekList />
       </div>
     </section>
   );

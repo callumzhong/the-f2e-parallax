@@ -3,7 +3,7 @@ import ImageWeek2 from "@/assets/main/week_2.png";
 import ImageWeek3 from "@/assets/main/week_3.png";
 import Button from "../Button";
 
-export default function ScheduleList() {
+export default function WeekList() {
   return (
     <ul className="flex flex-col items-center gap-11 text-center">
       <li className="flex w-full flex-col gap-2 xl:w-max xl:flex-row xl:items-start xl:gap-10 xl:self-start">
