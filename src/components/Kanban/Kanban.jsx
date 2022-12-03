@@ -1,5 +1,4 @@
 import Button from "../Button";
-
 import Banner from "./Banner";
 import Decorate from "./Decorate";
 import KanbanList from "./KanbanList";

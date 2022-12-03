@@ -20,8 +20,8 @@ export default function HomePage() {
   return (
     <Layout ref={layoutRef}>
       <Kanban />
-      <Question />
-      <Cooperation />
+      {/* <Question />
+      <Cooperation /> */}
     </Layout>
   );
 }
