@@ -9,20 +9,16 @@ export default function JoinButton({ isStay, isAnimation, className, href }) {
     <div className={clsx("group relative mx-auto", className)}>
       <img
         className={clsx(
-          "mx-auto mb-[2.67px] w-[55.35%] group-hover:translate-y-[40%] group-active:translate-y-0",
+          "mx-auto mb-1 w-[55.35%] group-hover:opacity-100 group-active:translate-y-[40%]",
           !isStay && "opacity-0",
           isAnimation && "animate-bounce group-hover:animate-none"
         )}
         src={ImageBtnJoinHead}
         alt=""
       />
+      <img className="mx-auto group-active:hidden" src={ImageBtnJoin} alt="" />
       <img
-        className="mx-auto group-hover:hidden group-active:block"
-        src={ImageBtnJoin}
-        alt=""
-      />
-      <img
-        className="mx-auto hidden group-hover:block group-active:hidden"
+        className="mx-auto hidden group-active:block"
         src={ImageBtnJoinHover}
         alt=""
       />

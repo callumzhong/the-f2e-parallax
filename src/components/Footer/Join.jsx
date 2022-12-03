@@ -1,13 +1,12 @@
 import JoinButton from "../JoinButton";
-import { H5 } from "../Typography";
 
 export default function Join() {
   return (
     // index
     <div className="absolute right-5 bottom-5 hidden text-center lg:block">
-      <H5 as="p" className="mb-6 text-primary">
+      <p className="mb-6 text-sm text-primary md:text-2xl md:leading-[2.125rem]">
         JOIN
-      </H5>
+      </p>
       <JoinButton
         className="w-10 xl:w-[103px]"
         href="https://2022.thef2e.com/signup"

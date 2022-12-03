@@ -34,27 +34,30 @@ export const raceAnimation = {
   },
 };
 
+// TODO: 響應式寬度要調整成 % 比，僅當呈現最大 xl 時使用 min function 限制最大寬度
 export default function RaceTrack() {
   return (
-    // Kanban
-    <div className="footer-section__race relative flex justify-center px-5 md:w-[349px] xl:h-[min(50.48vh,517px)] xl:w-[min(81.60vw,1175px)] xl:translate-x-4 2xl:h-[min(55.64vh,601px)]">
-      <img className="absolute inset-x-0 bottom-0" src={ImageRoad} alt="" />
-      <img
-        className="relative w-[112.35px] xl:h-full xl:w-auto 2xl:bottom-4"
-        src={ImageCharacterF2EGif}
-        alt=""
-      />
-      <img
-        className="relative w-[118.49px] xl:bottom-[15px] xl:h-full xl:w-auto 2xl:bottom-[27px]"
-        src={ImageCharacterUIGif}
-        alt=""
-      />
-      <img
-        className="relative w-[112.35px] xl:h-full xl:w-auto 2xl:bottom-[9px]"
-        src={ImageCharacterTeamGif}
-        alt=""
-      />
-    </div>
+    // mobile index, desktop Kanban
+    // <div className="footer-section__race relative flex justify-center px-5 md:w-[349px] xl:h-[min(50.48vh,517px)] xl:w-[min(81.60vw,1175px)] xl:translate-x-4 2xl:h-[min(55.64vh,601px)]">
+    //   <img className="absolute inset-x-0 bottom-0" src={ImageRoad} alt="" />
+    //   <img
+    //     className="relative w-[112.35px] xl:h-full xl:w-auto 2xl:bottom-4"
+    //     src={ImageCharacterF2EGif}
+    //     alt=""
+    //   />
+    //   <img
+    //     className="relative w-[118.49px] xl:bottom-[15px] xl:h-full xl:w-auto 2xl:bottom-[27px]"
+    //     src={ImageCharacterUIGif}
+    //     alt=""
+    //   />
+    //   <img
+    //     className="relative w-[112.35px] xl:h-full xl:w-auto 2xl:bottom-[9px]"
+    //     src={ImageCharacterTeamGif}
+    //     alt=""
+    //   />
+    // </div>
+
+    // mobile , desktop question
     // <div className="footer-section__race relative bottom-0 flex w-[164px] items-end justify-center md:w-[277px] xl:w-[min(62.5vw,900px)]">
     //   <img className="absolute inset-x-0 bottom-0" src={ImageRoad} alt="" />
     //   <img
@@ -73,5 +76,25 @@ export default function RaceTrack() {
     //     alt=""
     //   />
     // </div>
+
+    // desktop cooperation
+    <div className="footer-section__race relative bottom-0 flex items-end justify-center xl:w-[min(79.86vw,71.875rem)]">
+      <img className="absolute inset-x-0 bottom-0" src={ImageRoad} alt="" />
+      <img
+        className="relative xl:-bottom-[min(2.93vh,1.875rem)] xl:h-[min(58.99vh,37.75rem)]"
+        src={ImageCharacterF2EGif}
+        alt=""
+      />
+      <img
+        className="relative xl:bottom-[min(2.25vh,1.4375rem)] xl:h-[min(52.34vh,33.5rem)]"
+        src={ImageCharacterUIGif}
+        alt=""
+      />
+      <img
+        className="relative xl:-bottom-[0.3125rem] xl:h-[min(51.37vh,32.875rem)]"
+        src={ImageCharacterTeamGif}
+        alt=""
+      />
+    </div>
   );
 }

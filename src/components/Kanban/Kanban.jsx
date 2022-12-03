@@ -2,7 +2,6 @@ import Button from "../Button";
 
 import Banner from "./Banner";
 import Decorate from "./Decorate";
-import { H1 } from "../Typography";
 import KanbanList from "./KanbanList";
 
 export default function Kanban() {
@@ -11,9 +10,9 @@ export default function Kanban() {
       <Banner />
       <Button
         color="highlight"
-        className="mx-auto mb-5 w-max xl:-mt-6 xl:mb-[6.25vh]"
+        className="mx-auto mb-5 w-max xl:-mt-6 xl:mb-[min(6.25vh,4rem)]"
       >
-        <H1>互動式網頁設計</H1>
+        <h1 className="text-mobile-h1 xl:text-desktop-h1">互動式網頁設計</h1>
       </Button>
       <div className="relative mx-auto">
         <KanbanList />
