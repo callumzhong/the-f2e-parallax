@@ -7,6 +7,7 @@ import Kanban from "@/components/Kanban";
 import Question from "@/components/Question";
 import Cooperation from "@/components/Cooperation";
 import Week from "@/components/Week";
+import Schedule from "@/components/Schedule/Schedule";
 
 gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
@@ -24,6 +25,7 @@ export default function HomePage() {
       <Question />
       <Cooperation />
       <Week />
+      <Schedule />
     </Layout>
   );
 }
