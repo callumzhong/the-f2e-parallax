@@ -7,8 +7,9 @@ import Kanban from "@/components/Kanban";
 import Question from "@/components/Question";
 import Cooperation from "@/components/Cooperation";
 import Week from "@/components/Week";
-import Schedule from "@/components/Schedule/Schedule";
-import Encourage from "@/components/Encourage/index";
+import Schedule from "@/components/Schedule";
+import Encourage from "@/components/Encourage";
+import Trophy from "@/components/Trophy";
 
 gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
@@ -28,6 +29,7 @@ export default function HomePage() {
       <Week />
       <Schedule />
       <Encourage />
+      <Trophy />
     </Layout>
   );
 }
