@@ -8,6 +8,7 @@ import Question from "@/components/Question";
 import Cooperation from "@/components/Cooperation";
 import Week from "@/components/Week";
 import Schedule from "@/components/Schedule/Schedule";
+import Encourage from "@/components/Encourage/index";
 
 gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
@@ -26,6 +27,7 @@ export default function HomePage() {
       <Cooperation />
       <Week />
       <Schedule />
+      <Encourage />
     </Layout>
   );
 }

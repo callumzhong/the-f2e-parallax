@@ -3,8 +3,8 @@ import ImageDateLine from "@/assets/main/date_line.png";
 
 export default function ScheduleDateLine() {
   return (
-    <div className="relative -mt-8">
-      <ul className="hidden xl:flex xl:justify-center xl:gap-[12%]">
+    <div className="-mt-8 hidden xl:top-0 xl:block">
+      <ul className="xl:flex xl:justify-center xl:gap-[12%]">
         <li className="w-[min(16.9169rem)]">
           <img
             className="mx-auto h-[8.75rem] w-8"
@@ -28,7 +28,7 @@ export default function ScheduleDateLine() {
         </li>
       </ul>
       <img
-        className="absolute inset-x-0 -bottom-12"
+        className="relative inset-x-0 bottom-14"
         src={ImageDateLine}
         alt=""
       />
