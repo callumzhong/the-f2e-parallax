@@ -5,7 +5,9 @@ import TextPlugin from "gsap/TextPlugin";
 import Layout from "./Layout";
 import Kanban, { HandleOfKanbanAnimation } from "@/components/Kanban";
 import Question, { HandleOfQuestionAnimation } from "@/components/Question";
-import Cooperation from "@/components/Cooperation";
+import Cooperation, {
+  HandleOfCooperationAnimation,
+} from "@/components/Cooperation";
 import Week from "@/components/Week";
 import Schedule from "@/components/Schedule";
 import Encourage from "@/components/Encourage";
@@ -23,6 +25,7 @@ export default function HomePage() {
     const ctx = gsap.context(() => {
       HandleOfKanbanAnimation(gsap);
       HandleOfQuestionAnimation(gsap);
+      HandleOfCooperationAnimation(gsap);
     }, layoutRef);
     return () => ctx.revert();
   }, []);

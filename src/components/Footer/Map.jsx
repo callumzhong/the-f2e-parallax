@@ -3,7 +3,7 @@ import ImageMapNow from "@/assets/main/map_now.gif";
 
 export const mapAnimation = {
   hero: (tl) => {
-    tl.to(".footer-section__map-now", {
+    tl.to("map-now", {
       left: 16,
       top: 20,
       duration: 10,
@@ -20,9 +20,15 @@ export default function Map() {
     <div className="hidden xl:absolute xl:left-8 xl:bottom-0 xl:block">
       <img src={ImageMap} alt="" />
       <img
-        className="footer-section__map-now absolute top-[52px] left-[2px] scale-110"
+        className="map-now absolute top-[52px] left-[2px] scale-110"
         src={ImageMapNow}
         alt=""
+        style={
+          {
+            // left: 114,
+            // top: 12,
+          }
+        }
       />
     </div>
   );

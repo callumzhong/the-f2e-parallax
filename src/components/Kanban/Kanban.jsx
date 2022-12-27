@@ -16,22 +16,21 @@ export function HandleOfKanbanAnimation(gsap) {
         scrub: 1,
       },
     });
-    tl.addLabel("part-1")
-      // part 1
+    tl.addLabel("start")
       // 雲縮小往內飄進來
       .to(
         ".cloud-left",
         {
           scale: 0.75,
         },
-        "part-1"
+        "start"
       )
       .to(
         ".cloud-right",
         {
           scale: 0.75,
         },
-        "part-1"
+        "start"
       )
       // 隱藏紅綠燈文字, 只顯示紅燈
       .to(
@@ -39,23 +38,22 @@ export function HandleOfKanbanAnimation(gsap) {
         {
           opacity: 0,
         },
-        "part-1"
+        "start"
       )
       .to(
         ".ready-frame__center",
         {
           opacity: 0,
         },
-        "part-1"
+        "start"
       )
       .to(
         ".ready-frame__right",
         {
           opacity: 0,
         },
-        "part-1"
+        "start"
       )
-      .addLabel("part-2")
       // part 2
       // 雲往中間飄 start
       .set(
@@ -63,7 +61,7 @@ export function HandleOfKanbanAnimation(gsap) {
         {
           text: "GO!!",
         },
-        "part-2"
+        "start+=0.5"
       )
       .to(
         ".cloud-left",
@@ -71,7 +69,7 @@ export function HandleOfKanbanAnimation(gsap) {
           x: 60,
           y: -10,
         },
-        "part-2"
+        "start+=0.5"
       )
       .to(
         ".cloud-right",
@@ -79,32 +77,31 @@ export function HandleOfKanbanAnimation(gsap) {
           x: -60,
           y: -10,
         },
-        "part-2"
+        "start+=0.5"
       )
       .to(
         ".ready-frame__left",
         {
           opacity: 0,
         },
-        "part-2"
+        "start+=0.5"
       )
       .to(
         ".ready-frame__center",
         {
           opacity: 1,
         },
-        "part-2"
+        "start+=0.5"
       )
       // part-3
       // 隱藏雲朵, 切換紅綠燈
-      .addLabel("part-3")
       .to(
         ".cloud-left",
         {
           scale: 0.3,
           opacity: 0,
         },
-        "part-3"
+        "start+=1"
       )
       .to(
         ".cloud-right",
@@ -112,34 +109,33 @@ export function HandleOfKanbanAnimation(gsap) {
           scale: 0.3,
           opacity: 0,
         },
-        "part-3"
+        "start+=1"
       )
       .to(
         ".ready-frame__center",
         {
           opacity: 0,
         },
-        "part-3"
+        "start+=1"
       )
       .to(
         ".ready-frame__right",
         {
           opacity: 1,
         },
-        "part-3"
+        "start+=1"
       )
       .to(
         ".ready-frame__text",
         {
           opacity: 1,
         },
-        "part-3"
+        "start+=1"
       )
       // part-4
       // 隱藏其餘區塊
-      .addLabel("part-4")
-      .to(".kanban-content", { opacity: 0 }, "part-4")
-      .to("#kanban-section", { opacity: 0 }, "part-4+=0.5");
+      .to(".kanban-content", { opacity: 0 }, "start+=1.5")
+      .to("#kanban-section", { opacity: 0 }, "start+=2");
   });
 }
 

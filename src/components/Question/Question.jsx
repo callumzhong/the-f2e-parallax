@@ -32,14 +32,31 @@ export function HandleOfQuestionAnimation(gsap) {
         scrub: 1,
       },
     });
-    tl.addLabel("part-1")
+
+    tl.addLabel("start")
+      .to(
+        ".footer-section .map-now",
+        {
+          left: 16,
+          top: 20,
+        },
+        "start"
+      )
+      .to(
+        ".footer-section .map-now",
+        {
+          left: 44,
+          top: 2,
+        },
+        "start"
+      )
       .to(
         ".footer-section__race",
         {
           scale: 0.7,
           y: 80,
         },
-        "part-1"
+        "start"
       )
       .to(
         ".flower",
@@ -47,23 +64,23 @@ export function HandleOfQuestionAnimation(gsap) {
           y: -20,
           opacity: 1,
         },
-        "part-1"
+        "start"
       )
       .to(
         ".question-section__title",
         {
           opacity: 1,
         },
-        "part-1"
+        "start"
       )
-      .addLabel("part-2")
+      // part-2
       .to(
         ".question-list >li:nth-child(1)",
         {
           x: 0,
           opacity: 1,
         },
-        "part-2"
+        "start+=0.5"
       )
       .to(
         ".flower",
@@ -71,15 +88,15 @@ export function HandleOfQuestionAnimation(gsap) {
           y: -30,
           scale: 0.8,
         },
-        "part-2"
+        "start+=0.5"
       )
-      .addLabel("part-3")
+      // part-3
       .to(
         ".question-list >li:nth-child(2)",
         {
           opacity: 1,
         },
-        "part-3"
+        "start+=1"
       )
       .to(
         ".flower",
@@ -87,16 +104,17 @@ export function HandleOfQuestionAnimation(gsap) {
           y: -40,
           scale: 0.6,
         },
-        "part-3"
+        "start+=1"
       )
-      .addLabel("part-4")
+      // part-4
+      .addLabel("start+=1.5")
       .to(
         ".question-list >li:nth-child(3)",
         {
           x: 0,
           opacity: 1,
         },
-        "part-4"
+        "start+=1.5"
       )
       .to(
         ".flower",
@@ -105,17 +123,16 @@ export function HandleOfQuestionAnimation(gsap) {
           scale: 0.2,
           opacity: 0,
         },
-        "part-4"
+        "start+=1.5"
       )
-      .addLabel("part-5")
-      .to("#question-section *", { opacity: 0 }, "part-5")
+      .to("#question-section *", { opacity: 0 }, "start+=2")
       .to(
         ".footer-section__race",
         {
           scale: 1,
           y: 0,
         },
-        "part-5"
+        "start+=2"
       );
   });
 }

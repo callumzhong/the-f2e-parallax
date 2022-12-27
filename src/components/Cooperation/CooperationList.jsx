@@ -21,7 +21,7 @@ Title.propTypes = {
 
 export default function CooperationList() {
   return (
-    <ul className="flex flex-col justify-center gap-5 xl:flex-row xl:gap-[3.75rem]">
+    <ul className="cooperation-list flex flex-col justify-center gap-5 xl:flex-row xl:gap-[3.75rem]">
       <li className="flex items-center gap-5 xl:w-1/3 xl:justify-center">
         <img className="w-1/2 xl:hidden" src={ImageCharacterF2E} alt="" />
         <div className="w-1/2 xl:w-auto">
