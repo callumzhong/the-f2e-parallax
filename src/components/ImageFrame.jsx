@@ -3,14 +3,16 @@ import PropTypes from "prop-types";
 
 export default function ImageFrame({ href, target, className, children }) {
   const classes = clsx(
-    "bg-btn_sponsor bg-cover p-5 pr-6 hover:bg-btn_sponsor_hover",
+    "block bg-btn_sponsor bg-cover p-[1.625rem] hover:bg-btn_sponsor_hover",
     className
   );
 
   if (href) {
-    <a href={href} target={target} className={classes}>
-      {children}
-    </a>;
+    return (
+      <a href={href} target={target} className={classes}>
+        {children}
+      </a>
+    );
   }
 
   return <div className={classes}>{children}</div>;

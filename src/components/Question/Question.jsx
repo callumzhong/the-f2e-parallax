@@ -1,61 +1,17 @@
-import Title from "@/components/Title/Title";
-import ImageQuestionMobile1 from "@/assets/main/question_1_m.png";
-import ImageQuestion1 from "@/assets/main/question_1.png";
-import ImageQuestion2 from "@/assets/main/question_2.png";
-import ImageQuestionMobile3 from "@/assets/main/question_3_m.png";
-import ImageQuestion3 from "@/assets/main/question_3.png";
+import { Flowers } from "../Decorate/index";
+import TitleSection from "../TitleSection/TitleSection";
 import QuestionList from "./QuestionList";
-import Decorate from "./Decorate";
-import { raceAnimation } from "../Footer";
-
-const items = [
-  {
-    id: "question-1",
-    title: "羨慕別人的酷酷網頁動畫？",
-    image: {
-      path: ImageQuestionMobile1,
-      largeMedia: 1024,
-      largePath: ImageQuestion1,
-    },
-  },
-  {
-    id: "question-2",
-    title: "滿足不了同事的許願？",
-    image: {
-      path: ImageQuestion2,
-    },
-  },
-  {
-    id: "question-3",
-    title: "動畫技能樹太雜無從下手？",
-    image: {
-      path: ImageQuestionMobile3,
-      largeMedia: 1024,
-      largePath: ImageQuestion3,
-    },
-  },
-];
-
-export function questionAnimationHandler(gsap) {
-  const tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".question-section",
-      markers: true,
-      start: "top top",
-      end: "+=800",
-      scrub: true,
-    },
-  });
-
-  raceAnimation.question(tl);
-}
 
 export default function Question() {
   return (
-    <section className="question-section relative w-full pt-[59px] pb-[207px] lg:pb-[35.25vh]">
-      <Title>你是否也有以下困擾？</Title>
-      <QuestionList items={items} />
-      <Decorate />
+    <section className="relative pb-[3.75rem] xl:min-h-screen xl:pb-0 xl:pt-[min(3.91vh,2.5rem)]">
+      <TitleSection className="mx-auto mb-10 h-[4.5rem] w-full xl:mb-[min(3.91vh,2.5rem)] xl:h-[min(14.75vh,9.4375rem)]">
+        你是否也有以下困擾？
+      </TitleSection>
+      <div className="mx-auto px-5 md:max-w-[29.75rem] xl:max-w-none xl:pl-5 xl:pr-[0.625rem] 2xl:max-w-[90rem]">
+        <QuestionList />
+      </div>
+      <Flowers />
     </section>
   );
 }

@@ -2,8 +2,8 @@ import clsx from "clsx";
 import PropTypes from "prop-types";
 
 export const variants = {
-  fill: "rounded-full inline-block font-bold",
-  outline: "rounded-full border-2 inline-block font-bold",
+  fill: "rounded-full",
+  outline: "rounded-full border-2",
 };
 
 export const colors = {
@@ -11,17 +11,12 @@ export const colors = {
   "secondary-fill": "bg-secondary-dark rounded-full text-white",
   "secondary-outline":
     "border-secondary-dark rounded-full border-2 text-secondary-dark",
-};
-
-export const sizes = {
-  md: "px-6 py-1 text-lg leading-loose",
-  lg: "px-7 py-2 text-xl md:text-[32px] md:leading-relaxed",
+  "highlight-fill": "bg-highlight text-white rounded-full",
 };
 
 export default function Button({
   color,
   variant,
-  size,
   className,
   children,
   onClick,
@@ -29,10 +24,9 @@ export default function Button({
   target,
 }) {
   const classes = clsx(
+    className,
     variants[variant],
-    colors[`${color}-${variant}`],
-    sizes[size],
-    className
+    colors[`${color}-${variant}`]
   );
 
   if (!onClick && !href) {
@@ -61,7 +55,6 @@ Button.defaultProps = {
   href: null,
   target: null,
   className: null,
-  size: "md",
   variant: "fill",
 };
 
@@ -69,7 +62,6 @@ Button.propTypes = {
   variant: PropTypes.oneOf(Object.keys(variants)),
   color: PropTypes.oneOf(Object.keys(colors).map((item) => item.split("-")[0]))
     .isRequired,
-  size: PropTypes.oneOf(Object.keys(sizes)),
   className: PropTypes.string,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),

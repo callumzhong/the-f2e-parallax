@@ -1,13 +1,29 @@
 import JoinButton from "../JoinButton";
-import { H5 } from "../Typography";
 
 export default function Join() {
   return (
-    <div className="absolute right-4 bottom-0 hidden text-center lg:block">
-      <H5 as="p" className="mb-6 text-primary">
+    // index
+    <div className="absolute right-5 bottom-5 hidden xl:block">
+      <p className="mb-1 text-center text-sm text-primary xl:text-2xl xl:leading-[2.125rem]">
         JOIN
-      </H5>
-      <JoinButton href="https://2022.thef2e.com/signup" isStay isAnimation />
+      </p>
+      <JoinButton
+        className="w-10 xl:h-[min(12.01vh,10.8125rem)] xl:w-[6.4375rem] 2xl:h-[min(16.02vh,10.8125rem)]"
+        href="https://2022.thef2e.com/signup"
+        isStay
+        isAnimation
+      />
     </div>
+
+    // center
+    // <div className="absolute right-4 bottom-0 text-center lg:hidden">
+    //   <p className="mb-[2.67px] text-sm leading-relaxed text-primary">JOIN</p>
+    //   <JoinButton
+    //     className="w-10 xl:w-[103px]"
+    //     href="https://2022.thef2e.com/signup"
+    //     isStay
+    //     isAnimation
+    //   />
+    // </div>
   );
 }

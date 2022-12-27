@@ -4,10 +4,10 @@ import RaceTrack from "./RaceTrack";
 
 export default function Footer() {
   return (
-    <footer className="footer-section fixed inset-x-0 bottom-0 flex justify-center px-5">
+    <footer className="footer-section sticky bottom-0 z-10">
+      <Map />
       <RaceTrack />
       <Join />
-      <Map />
     </footer>
   );
 }

@@ -7,7 +7,7 @@ const Layout = forwardRef(({ children }, ref) => {
   return (
     <div className="app" ref={ref}>
       <Header />
-      <main className="flex flex-col">{children}</main>
+      <main>{children}</main>
       <Footer />
     </div>
   );
