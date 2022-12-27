@@ -22,13 +22,13 @@ Title.propTypes = {
 
 export default function QuestionList() {
   return (
-    <ul className="flex flex-wrap xl:-mx-[0.625rem]">
+    <ul className="question-list flex flex-wrap overflow-hidden xl:-mx-[0.625rem]">
       <li className="h-full xl:w-1/3 xl:px-[0.625rem] 2xl:w-[28.5419rem]">
         <Title>羨慕別人的酷酷網頁動畫？</Title>
         <picture>
           <source media="(min-width:1024px)" srcSet={ImageQuestion1} />
           <img
-            className="xl:h-[min(40.23vh,25.75rem)] 2xl:h-[min(38.15vh,25.75rem)]"
+            className="mx-auto xl:h-[min(40.23vh,25.75rem)] 2xl:h-[min(38.15vh,25.75rem)]"
             src={ImageQuestionMobile1}
             alt=""
           />
@@ -37,7 +37,7 @@ export default function QuestionList() {
       <li className="xl:w-1/3 xl:px-[0.625rem] 2xl:w-[28.5419rem]">
         <Title>滿足不了同事的許願？</Title>
         <img
-          className="xl:h-[min(40.23vh,25.75rem)] 2xl:h-[min(38.15vh,25.75rem)]"
+          className="mx-auto xl:h-[min(40.23vh,25.75rem)] 2xl:h-[min(38.15vh,25.75rem)]"
           src={ImageQuestion2}
           alt=""
         />
@@ -47,7 +47,7 @@ export default function QuestionList() {
         <picture>
           <source media="(min-width:1024px)" srcSet={ImageQuestion3} />
           <img
-            className="xl:h-[min(40.23vh,25.75rem)] 2xl:h-[min(38.15vh,25.75rem)]"
+            className="mx-auto xl:h-[min(40.23vh,25.75rem)] 2xl:h-[min(38.15vh,25.75rem)]"
             src={ImageQuestionMobile3}
             alt=""
           />

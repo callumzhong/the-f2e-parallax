@@ -2,6 +2,7 @@ import ImageRoad from "@/assets/main/road.png";
 import ImageCharacterF2EGif from "@/assets/character/character_f2e.gif";
 import ImageCharacterTeamGif from "@/assets/character/character_team.gif";
 import ImageCharacterUIGif from "@/assets/character/character_ui.gif";
+import { Flowers } from "../Decorate";
 
 export const raceAnimation = {
   hero: (tl) => {
@@ -55,6 +56,9 @@ export default function RaceTrack() {
         src={ImageCharacterTeamGif}
         alt=""
       />
+      <div>
+        <Flowers />
+      </div>
     </div>
 
     // mobile , desktop question

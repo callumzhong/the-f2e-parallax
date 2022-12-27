@@ -141,14 +141,6 @@ export function HandleOfKanbanAnimation(gsap) {
       .to(".kanban-content", { opacity: 0 }, "part-4")
       .to("#kanban-section", { opacity: 0 }, "part-4+=0.5");
   });
-  // .to(
-  //   ".footer-section__race",
-  //   {
-  //     scale: 0.7,
-  //     y: 80,
-  //   },
-  //   "part-4+=0.5"
-  // );
 }
 
 export default function Kanban() {
