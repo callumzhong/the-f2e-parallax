@@ -2,9 +2,25 @@ import { Flowers } from "../Decorate/index";
 import TitleSection from "../TitleSection/TitleSection";
 import QuestionList from "./QuestionList";
 
+export function HandleOfQuestionAnimation(gsap) {
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#question-section",
+      markers: true,
+      pin: true,
+      start: "top top",
+      end: "+=500",
+      scrub: 1,
+    },
+  });
+}
+
 export default function Question() {
   return (
-    <section className="relative pb-[3.75rem] xl:min-h-screen xl:pb-0 xl:pt-[min(3.91vh,2.5rem)]">
+    <section
+      id="question-section"
+      className="relative pb-[3.75rem] xl:min-h-screen xl:pb-0 xl:pt-[min(3.91vh,2.5rem)]"
+    >
       <TitleSection className="mx-auto mb-10 h-[4.5rem] w-full xl:mb-[min(3.91vh,2.5rem)] xl:h-[min(14.75vh,9.4375rem)]">
         你是否也有以下困擾？
       </TitleSection>

@@ -3,8 +3,8 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import TextPlugin from "gsap/TextPlugin";
 import Layout from "./Layout";
-import Kanban from "@/components/Kanban";
-import Question from "@/components/Question";
+import Kanban, { HandleOfKanbanAnimation } from "@/components/Kanban";
+import Question, { HandleOfQuestionAnimation } from "@/components/Question";
 import Cooperation from "@/components/Cooperation";
 import Week from "@/components/Week";
 import Schedule from "@/components/Schedule";
@@ -20,9 +20,12 @@ export default function HomePage() {
   const layoutRef = useRef();
 
   useLayoutEffect(() => {
-    const ctx = gsap.context(() => {}, layoutRef);
+    const ctx = gsap.context(() => {
+      HandleOfKanbanAnimation(gsap);
+      HandleOfQuestionAnimation(gsap);
+    }, layoutRef);
     return () => ctx.revert();
-  }, [layoutRef]);
+  }, []);
 
   return (
     <Layout ref={layoutRef}>
