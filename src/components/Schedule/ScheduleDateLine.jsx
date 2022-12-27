@@ -27,11 +27,7 @@ export default function ScheduleDateLine() {
           />
         </li>
       </ul>
-      <img
-        className="relative inset-x-0 bottom-14"
-        src={ImageDateLine}
-        alt=""
-      />
+      <img className="relative bottom-14" src={ImageDateLine} alt="" />
     </div>
   );
 }

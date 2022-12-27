@@ -1,6 +1,6 @@
 import Button from "../Button";
+import { Clouds, ReadyFrame } from "../Decorate";
 import Banner from "./Banner";
-import Decorate from "./Decorate";
 import KanbanList from "./KanbanList";
 
 export default function Kanban() {
@@ -15,7 +15,9 @@ export default function Kanban() {
       </Button>
       <div className="relative mx-auto">
         <KanbanList />
-        <Decorate />
+        <Clouds>
+          <ReadyFrame />
+        </Clouds>
       </div>
     </section>
   );

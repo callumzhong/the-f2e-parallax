@@ -10,6 +10,9 @@ import Week from "@/components/Week";
 import Schedule from "@/components/Schedule";
 import Encourage from "@/components/Encourage";
 import Trophy from "@/components/Trophy";
+import Sponsor from "@/components/Sponsor";
+import SignUp from "@/components/SignUp";
+import Finish from "@/components/Finish";
 
 gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
@@ -30,6 +33,9 @@ export default function HomePage() {
       <Schedule />
       <Encourage />
       <Trophy />
+      <Sponsor />
+      <Finish />
+      <SignUp />
     </Layout>
   );
 }

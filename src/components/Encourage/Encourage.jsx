@@ -1,4 +1,4 @@
-import Decorate from "./Decorate";
+import { Graffiti } from "../Decorate";
 
 export default function Encourage() {
   return (
@@ -8,7 +8,7 @@ export default function Encourage() {
         <br className="xl:hidden" />
         已經無法滿足了嗎？
       </p>
-      <Decorate />
+      <Graffiti />
     </section>
   );
 }

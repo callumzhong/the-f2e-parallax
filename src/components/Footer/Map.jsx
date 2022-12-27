@@ -17,7 +17,7 @@ export const mapAnimation = {
 
 export default function Map() {
   return (
-    <div className="absolute left-8 bottom-0 hidden lg:block">
+    <div className="hidden xl:absolute xl:left-8 xl:bottom-0 xl:block">
       <img src={ImageMap} alt="" />
       <img
         className="footer-section__map-now absolute top-[52px] left-[2px] scale-110"
