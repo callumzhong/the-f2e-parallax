@@ -6,4 +6,18 @@
   html {
     font-family: "GenJyuuGothicP", sans-serif;
   }
+  /* In Chrome, Safari, Opera, and other WebKit-based browsers */
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* In IE (Internet Explorer) and Edge */
+  body {
+    -ms-overflow-style: none;
+  }
+  /* In Firefox */
+  html {
+    scrollbar-width: none;
+  }
+  
 }

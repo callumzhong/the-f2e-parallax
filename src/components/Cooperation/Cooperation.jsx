@@ -1,13 +1,11 @@
+import gsap from "gsap";
 import TitleSection from "../TitleSection/TitleSection";
 import CooperationList from "./CooperationList";
 
-export function HandleOfCooperationAnimation(gsap) {
+export function HandleOfCooperationAnimation() {
   const mm = gsap.matchMedia();
   mm.add("(min-width:1280px)", () => {
-    gsap.set(".cooperation-section__title", {
-      opacity: 0,
-    });
-    gsap.set(".cooperation-section__subtitle", {
+    gsap.set(".cooperation-section__title, .cooperation-section__subtitle", {
       opacity: 0,
     });
     gsap.set(".cooperation-list", {
@@ -18,7 +16,6 @@ export function HandleOfCooperationAnimation(gsap) {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: "#cooperation-section",
-        markers: true,
         pin: true,
         start: "top top",
         end: "+=500",
@@ -44,14 +41,7 @@ export function HandleOfCooperationAnimation(gsap) {
         "start"
       )
       .to(
-        ".cooperation-section__title",
-        {
-          opacity: 1,
-        },
-        "start"
-      )
-      .to(
-        ".cooperation-section__subtitle",
+        ".cooperation-section__title, .cooperation-section__subtitle",
         {
           opacity: 1,
         },
@@ -63,21 +53,14 @@ export function HandleOfCooperationAnimation(gsap) {
           opacity: 1,
           y: 0,
         },
-        "start+=0.5"
+        "start+=1.5"
       )
       .to(
-        ".cooperation-section__title",
+        ".cooperation-section__title, .cooperation-section__subtitle",
         {
           opacity: 0,
         },
-        "start+=2"
-      )
-      .to(
-        ".cooperation-section__subtitle",
-        {
-          opacity: 0,
-        },
-        "start+=2"
+        "start+=5"
       )
       .to(
         ".cooperation-list",
@@ -85,7 +68,7 @@ export function HandleOfCooperationAnimation(gsap) {
           opacity: 0,
           y: 50,
         },
-        "start+=2"
+        "start+=5"
       );
   });
 }

@@ -1,15 +1,15 @@
+import gsap from "gsap";
 import Button from "../Button";
 import { Clouds, ReadyFrame } from "../Decorate";
 import Banner from "./Banner";
 import KanbanList from "./KanbanList";
 
-export function HandleOfKanbanAnimation(gsap) {
+export function HandleOfKanbanAnimation() {
   const mm = gsap.matchMedia();
   mm.add("(min-width:1280px)", () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: "#kanban-section",
-        markers: true,
         pin: true,
         start: "top top",
         end: "+=500",
@@ -19,14 +19,7 @@ export function HandleOfKanbanAnimation(gsap) {
     tl.addLabel("start")
       // 雲縮小往內飄進來
       .to(
-        ".cloud-left",
-        {
-          scale: 0.75,
-        },
-        "start"
-      )
-      .to(
-        ".cloud-right",
+        ".cloud-left, .cloud-right",
         {
           scale: 0.75,
         },
@@ -34,21 +27,7 @@ export function HandleOfKanbanAnimation(gsap) {
       )
       // 隱藏紅綠燈文字, 只顯示紅燈
       .to(
-        ".ready-frame__text",
-        {
-          opacity: 0,
-        },
-        "start"
-      )
-      .to(
-        ".ready-frame__center",
-        {
-          opacity: 0,
-        },
-        "start"
-      )
-      .to(
-        ".ready-frame__right",
+        ".ready-frame__text, .ready-frame__center, .ready-frame__right",
         {
           opacity: 0,
         },
@@ -61,81 +40,51 @@ export function HandleOfKanbanAnimation(gsap) {
         {
           text: "GO!!",
         },
-        "start+=0.5"
+        "start+=1.5"
       )
       .to(
-        ".cloud-left",
+        ".cloud-left, .cloud-right",
         {
-          x: 60,
+          x: gsap.utils.wrap([60, -60]),
           y: -10,
         },
-        "start+=0.5"
+        "start+=1.5"
       )
       .to(
-        ".cloud-right",
+        ".ready-frame__left, .ready-frame__center",
         {
-          x: -60,
-          y: -10,
+          opacity: gsap.utils.wrap([0, 1]),
         },
-        "start+=0.5"
-      )
-      .to(
-        ".ready-frame__left",
-        {
-          opacity: 0,
-        },
-        "start+=0.5"
-      )
-      .to(
-        ".ready-frame__center",
-        {
-          opacity: 1,
-        },
-        "start+=0.5"
+        "start+=1.5"
       )
       // part-3
       // 隱藏雲朵, 切換紅綠燈
       .to(
-        ".cloud-left",
+        ".cloud-left, .cloud-right",
         {
           scale: 0.3,
           opacity: 0,
         },
-        "start+=1"
+        "start+=3"
       )
       .to(
-        ".cloud-right",
+        ".ready-frame__center, .ready-frame__right",
         {
-          scale: 0.3,
-          opacity: 0,
+          opacity: gsap.utils.wrap([0, 1, 1]),
         },
-        "start+=1"
-      )
-      .to(
-        ".ready-frame__center",
-        {
-          opacity: 0,
-        },
-        "start+=1"
-      )
-      .to(
-        ".ready-frame__right",
-        {
-          opacity: 1,
-        },
-        "start+=1"
+        "start+=3"
       )
       .to(
         ".ready-frame__text",
         {
           opacity: 1,
         },
-        "start+=1"
+        "start+=3"
       )
       // part-4
       // 隱藏其餘區塊
-      .to(".kanban-content", { opacity: 0 }, "start+=1.5")
-      .to("#kanban-section", { opacity: 0 }, "start+=2");
+      .to(".kanban-content", { opacity: 0 }, "start+=4")
+      .to("#kanban-section", { opacity: 0 }, "start+=4.5");
   });
 }
 

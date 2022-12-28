@@ -23,12 +23,10 @@ export default function Map() {
         className="map-now absolute top-[52px] left-[2px] scale-110"
         src={ImageMapNow}
         alt=""
-        style={
-          {
-            // left: 114,
-            // top: 12,
-          }
-        }
+        // style={{
+        //   left: 44,
+        //   top: 2,
+        // }}
       />
     </div>
   );

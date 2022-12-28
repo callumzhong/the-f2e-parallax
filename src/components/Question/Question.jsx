@@ -1,13 +1,14 @@
+import gsap from "gsap";
 import TitleSection from "../TitleSection/TitleSection";
 import QuestionList from "./QuestionList";
 
-export function HandleOfQuestionAnimation(gsap) {
+export function HandleOfQuestionAnimation() {
   const mm = gsap.matchMedia();
   mm.add("(min-width:1280px)", () => {
     gsap.set(".flower", {
       y: 200,
     });
-    gsap.set(".question-list>li:nth-child(2)", {
+    gsap.set(".question-list>li:nth-child(2), .question-section__title", {
       opacity: 0,
     });
     gsap.set(".question-list>li:nth-child(1)", {
@@ -18,14 +19,10 @@ export function HandleOfQuestionAnimation(gsap) {
       x: 20,
       opacity: 0,
     });
-    gsap.set(".question-section__title", {
-      opacity: 0,
-    });
 
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: "#question-section",
-        markers: true,
         pin: true,
         start: "top top",
         end: "+=500",
@@ -34,14 +31,6 @@ export function HandleOfQuestionAnimation(gsap) {
     });
 
     tl.addLabel("start")
-      .to(
-        ".footer-section .map-now",
-        {
-          left: 16,
-          top: 20,
-        },
-        "start"
-      )
       .to(
         ".footer-section .map-now",
         {
@@ -80,7 +69,7 @@ export function HandleOfQuestionAnimation(gsap) {
           x: 0,
           opacity: 1,
         },
-        "start+=0.5"
+        "start+=1.5"
       )
       .to(
         ".flower",
@@ -88,7 +77,7 @@ export function HandleOfQuestionAnimation(gsap) {
           y: -30,
           scale: 0.8,
         },
-        "start+=0.5"
+        "start+=1.5"
       )
       // part-3
       .to(
@@ -96,7 +85,7 @@ export function HandleOfQuestionAnimation(gsap) {
         {
           opacity: 1,
         },
-        "start+=1"
+        "start+=3"
       )
       .to(
         ".flower",
@@ -104,17 +93,16 @@ export function HandleOfQuestionAnimation(gsap) {
           y: -40,
           scale: 0.6,
         },
-        "start+=1"
+        "start+=3"
       )
       // part-4
-      .addLabel("start+=1.5")
       .to(
         ".question-list >li:nth-child(3)",
         {
           x: 0,
           opacity: 1,
         },
-        "start+=1.5"
+        "start+=4.5"
       )
       .to(
         ".flower",
@@ -123,16 +111,16 @@ export function HandleOfQuestionAnimation(gsap) {
           scale: 0.2,
           opacity: 0,
         },
-        "start+=1.5"
+        "start+=4.5"
       )
-      .to("#question-section *", { opacity: 0 }, "start+=2")
+      .to("#question-section *", { opacity: 0 }, "start+=5")
       .to(
         ".footer-section__race",
         {
           scale: 1,
           y: 0,
         },
-        "start+=2"
+        "start+=5.5"
       );
   });
 }

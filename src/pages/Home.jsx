@@ -8,9 +8,9 @@ import Question, { HandleOfQuestionAnimation } from "@/components/Question";
 import Cooperation, {
   HandleOfCooperationAnimation,
 } from "@/components/Cooperation";
-import Week from "@/components/Week";
-import Schedule from "@/components/Schedule";
-import Encourage from "@/components/Encourage";
+import Week, { HandleOfWeekAnimation } from "@/components/Week";
+import Schedule, { HandleOfScheduleAnimation } from "@/components/Schedule";
+import Encourage, { HandleOfEncourageAnimation } from "@/components/Encourage";
 import Trophy from "@/components/Trophy";
 import Sponsor from "@/components/Sponsor";
 import SignUp from "@/components/SignUp";
@@ -23,9 +23,12 @@ export default function HomePage() {
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      HandleOfKanbanAnimation(gsap);
-      HandleOfQuestionAnimation(gsap);
-      HandleOfCooperationAnimation(gsap);
+      HandleOfKanbanAnimation();
+      HandleOfQuestionAnimation();
+      HandleOfCooperationAnimation();
+      HandleOfWeekAnimation();
+      HandleOfScheduleAnimation();
+      HandleOfEncourageAnimation();
     }, layoutRef);
     return () => ctx.revert();
   }, []);

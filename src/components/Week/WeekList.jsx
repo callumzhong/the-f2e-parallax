@@ -5,7 +5,7 @@ import Button from "../Button";
 
 export default function WeekList() {
   return (
-    <ul className="flex flex-col items-center gap-11 text-center">
+    <ul className="week-list flex flex-col items-center gap-11 text-center">
       <li className="flex w-full flex-col gap-2 xl:w-max xl:flex-row xl:items-start xl:gap-10 xl:self-start">
         <img
           className="mx-auto w-[12.5rem] xl:w-[17.5rem]"

@@ -9,7 +9,7 @@ export default function ScheduleList({ className }) {
   return (
     <ul
       className={clsx(
-        "relative z-10 flex flex-col bg-secondary xl:flex-row xl:justify-center xl:gap-[12%]",
+        "schedule-list relative z-10 flex flex-col bg-secondary xl:flex-row xl:justify-center xl:gap-[12%]",
         className
       )}
     >
