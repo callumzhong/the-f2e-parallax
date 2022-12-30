@@ -1,25 +1,159 @@
 import gsap from "gsap";
-import TitleSection from "../TitleSection/TitleSection";
+import gaspTimelineAddHandler from "@/utils/gaspTimelineAddHandler";
+import TitleSection from "../TitleSection";
 import QuestionList from "./QuestionList";
+
+const gsapConfig = {
+  default: [
+    {
+      target: ".footer-section__race .flower",
+      vars: {
+        y: 200,
+        scale: 1.2,
+        opacity: 0,
+        display: "none",
+      },
+    },
+    {
+      target: ".question-list>li:nth-child(2), .question-section__title",
+      vars: {
+        opacity: 0,
+      },
+    },
+    {
+      target: ".question-list>li:nth-child(1)",
+      vars: {
+        x: -20,
+        opacity: 0,
+      },
+    },
+    {
+      target: ".question-list>li:nth-child(3)",
+      vars: {
+        x: 20,
+        opacity: 0,
+      },
+    },
+  ],
+  child: [
+    {
+      target: ".map-now",
+      vars: {
+        left: 44,
+        top: 2,
+      },
+    },
+    {
+      target: ".footer-section__race",
+      vars: {
+        scale: 0.77,
+      },
+    },
+    {
+      target: ".footer-section__characters img",
+      vars: {
+        scale: 0.61,
+      },
+    },
+    {
+      target: ".question-section__title",
+      vars: {
+        opacity: 1,
+      },
+    },
+    {
+      target: ".footer-section__race .flower",
+      vars: {
+        display: "flex",
+        y: -30,
+        opacity: 1,
+      },
+    },
+    {
+      target: ".question-list li",
+      vars: [
+        {
+          x: 0,
+          opacity: 1,
+          display: "block",
+        },
+        {
+          opacity: 1,
+          display: "block",
+        },
+        {
+          x: 0,
+          opacity: 1,
+          display: "block",
+        },
+      ],
+      position: [1.5, 3, 4.5],
+    },
+    {
+      target: ".footer-section__race .flower",
+      vars: {
+        y: -40,
+        scale: 0.8,
+      },
+      position: 1.5,
+    },
+    {
+      target: ".footer-section__race .flower",
+      vars: {
+        y: -50,
+        scale: 0.6,
+      },
+      position: 3,
+    },
+    {
+      target: ".footer-section__race .flower",
+      vars: {
+        y: -60,
+        scale: 0.2,
+        opacity: 0,
+        display: "none",
+      },
+      position: 4.5,
+    },
+    {
+      target: "#question-section *",
+      vars: {
+        display: "none",
+        opacity: 0,
+      },
+      position: 5,
+    },
+    {
+      target: ".footer-section__race",
+      vars: {
+        scale: 0.97,
+      },
+      position: 5.5,
+    },
+    {
+      target: ".footer-section__characters img",
+      vars: [
+        {
+          scale: 1.01,
+          bottom: 3,
+        },
+        {
+          scale: 0.89,
+          bottom: 23,
+        },
+        {
+          scale: 1,
+          bottom: 12,
+        },
+      ],
+      position: 5.5,
+    },
+  ],
+};
 
 export function HandleOfQuestionAnimation() {
   const mm = gsap.matchMedia();
   mm.add("(min-width:1280px)", () => {
-    gsap.set(".flower", {
-      y: 200,
-    });
-    gsap.set(".question-list>li:nth-child(2), .question-section__title", {
-      opacity: 0,
-    });
-    gsap.set(".question-list>li:nth-child(1)", {
-      x: -20,
-      opacity: 0,
-    });
-    gsap.set(".question-list>li:nth-child(3)", {
-      x: 20,
-      opacity: 0,
-    });
-
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: "#question-section",
@@ -30,108 +164,14 @@ export function HandleOfQuestionAnimation() {
       },
     });
 
-    tl.addLabel("start")
-      .to(
-        ".footer-section .map-now",
-        {
-          left: 44,
-          top: 2,
-        },
-        "start"
-      )
-      .to(
-        ".footer-section__race",
-        {
-          scale: 0.7,
-          y: 80,
-        },
-        "start"
-      )
-      .to(
-        ".flower",
-        {
-          y: -20,
-          opacity: 1,
-        },
-        "start"
-      )
-      .to(
-        ".question-section__title",
-        {
-          opacity: 1,
-        },
-        "start"
-      )
-      // part-2
-      .to(
-        ".question-list >li:nth-child(1)",
-        {
-          x: 0,
-          opacity: 1,
-        },
-        "start+=1.5"
-      )
-      .to(
-        ".flower",
-        {
-          y: -30,
-          scale: 0.8,
-        },
-        "start+=1.5"
-      )
-      // part-3
-      .to(
-        ".question-list >li:nth-child(2)",
-        {
-          opacity: 1,
-        },
-        "start+=3"
-      )
-      .to(
-        ".flower",
-        {
-          y: -40,
-          scale: 0.6,
-        },
-        "start+=3"
-      )
-      // part-4
-      .to(
-        ".question-list >li:nth-child(3)",
-        {
-          x: 0,
-          opacity: 1,
-        },
-        "start+=4.5"
-      )
-      .to(
-        ".flower",
-        {
-          y: -40,
-          scale: 0.2,
-          opacity: 0,
-        },
-        "start+=4.5"
-      )
-      .to("#question-section *", { opacity: 0 }, "start+=5")
-      .to(
-        ".footer-section__race",
-        {
-          scale: 1,
-          y: 0,
-        },
-        "start+=5.5"
-      );
+    gaspTimelineAddHandler({ tl, config: gsapConfig });
   });
 }
 
 export default function Question() {
   return (
-    <section
-      id="question-section"
-      className="relative pb-[3.75rem] xl:min-h-screen xl:pb-0 xl:pt-[min(3.91vh,2.5rem)]"
-    >
-      <TitleSection className="question-section__title mx-auto mb-10 h-[4.5rem] w-full xl:mb-[min(3.91vh,2.5rem)] xl:h-[min(14.75vh,9.4375rem)]">
+    <section id="question-section" className="relative xl:h-screen">
+      <TitleSection className="question-section__title mx-auto mb-10 h-[4.5rem] w-full xl:my-[min(3.91vh,2.5rem)] xl:h-[min(14.75vh,9.4375rem)]">
         你是否也有以下困擾？
       </TitleSection>
       <div className="mx-auto px-5 md:max-w-[29.75rem] xl:max-w-none xl:pl-5 xl:pr-[0.625rem] 2xl:max-w-[90rem]">

@@ -39,6 +39,7 @@ export default function WeekList() {
             className="inline-block px-6 text-lg leading-[2.3125rem]"
             variant="fill"
             color="secondary"
+            href="https://2022.thef2e.com/news/week1"
           >
             查看關卡細節
           </Button>
@@ -77,6 +78,7 @@ export default function WeekList() {
             className="inline-block px-6 text-lg leading-[2.3125rem]"
             variant="fill"
             color="secondary"
+            href="https://2022.thef2e.com/news/week2"
           >
             查看關卡細節
           </Button>
@@ -115,6 +117,7 @@ export default function WeekList() {
             className="inline-block px-6 text-lg leading-[2.3125rem]"
             variant="fill"
             color="secondary"
+            href="https://2022.thef2e.com/news/week3"
           >
             查看關卡細節
           </Button>

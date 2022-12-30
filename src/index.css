@@ -16,8 +16,16 @@
     -ms-overflow-style: none;
   }
   /* In Firefox */
-  html {
+  /* html {
     scrollbar-width: none;
+  } */
+}
+
+@layer components {
+  .menu-open label {
+    @apply bg-btn-burger-open hover:bg-btn-burger-open-hover active:bg-btn-burger-open-pressed;
   }
-  
+  .menu-close label {
+    @apply bg-btn-burger-close hover:bg-btn-burger-close-hover active:bg-btn-burger-close-pressed;
+  }
 }

@@ -14,7 +14,11 @@ export default function ScheduleList({ className }) {
       )}
     >
       <li className="py-5 xl:mt-3 xl:h-max xl:w-[min(16.9169rem)]">
-        <JoinButton className="mb-[0.9375rem] h-[8.4375rem]" isStay />
+        <JoinButton
+          href="https://2022.thef2e.com/signup"
+          className="mb-[0.9375rem] h-[8.4375rem]"
+          isStay
+        />
         <h3 className="mb-3 text-center text-mobile-h2 text-highlight">
           SIGN UP
         </h3>

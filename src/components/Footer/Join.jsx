@@ -14,16 +14,5 @@ export default function Join() {
         isAnimation
       />
     </div>
-
-    // center
-    // <div className="absolute right-4 bottom-0 text-center lg:hidden">
-    //   <p className="mb-[2.67px] text-sm leading-relaxed text-primary">JOIN</p>
-    //   <JoinButton
-    //     className="w-10 xl:w-[103px]"
-    //     href="https://2022.thef2e.com/signup"
-    //     isStay
-    //     isAnimation
-    //   />
-    // </div>
   );
 }

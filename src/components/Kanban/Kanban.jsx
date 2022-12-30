@@ -1,8 +1,106 @@
 import gsap from "gsap";
+import gaspTimelineAddHandler from "@/utils/gaspTimelineAddHandler";
 import Button from "../Button";
 import { Clouds, ReadyFrame } from "../Decorate";
 import Banner from "./Banner";
 import KanbanList from "./KanbanList";
+
+const gsapConfig = {
+  child: [
+    {
+      target: "#kanban-section .cloud-left, #kanban-section .cloud-right",
+      vars: {
+        scale: 0.75,
+      },
+    },
+    {
+      target: "#kanban-section .cloud-left, #kanban-section .cloud-right",
+      vars: [
+        {
+          scale: 0.7,
+          x: 60,
+          y: -10,
+        },
+        {
+          scale: 0.7,
+          x: -60,
+          y: -10,
+        },
+      ],
+      position: 1.5,
+    },
+    {
+      target: "#kanban-section .cloud-left, #kanban-section .cloud-right",
+      vars: {
+        scale: 0.3,
+        opacity: 0,
+        y: -40,
+      },
+      position: 2,
+    },
+    {
+      target: ".ready-frame__text, .ready-frame__center, .ready-frame__right",
+      vars: {
+        opacity: 0,
+      },
+    },
+    {
+      type: "set",
+      target: ".ready-frame__text",
+      vars: {
+        text: "GO!!",
+      },
+      position: 1.5,
+    },
+    {
+      target: ".ready-frame__left, .ready-frame__center",
+      vars: [
+        {
+          opacity: 0,
+        },
+        {
+          opacity: 1,
+        },
+      ],
+      position: 1.5,
+    },
+    {
+      target: ".ready-frame__center, .ready-frame__right",
+      vars: [
+        {
+          opacity: 0,
+        },
+        {
+          opacity: 1,
+        },
+      ],
+      position: 3,
+    },
+    {
+      target: ".ready-frame__text",
+      vars: {
+        opacity: 1,
+      },
+      position: 3,
+    },
+    {
+      target: ".kanban-content",
+      vars: {
+        display: "none",
+        opacity: 0,
+      },
+      position: 4,
+    },
+    {
+      target: "#kanban-section",
+      vars: {
+        display: "none",
+        opacity: 0,
+      },
+      position: 4.5,
+    },
+  ],
+};
 
 export function HandleOfKanbanAnimation() {
   const mm = gsap.matchMedia();
@@ -16,81 +114,14 @@ export function HandleOfKanbanAnimation() {
         scrub: 1,
       },
     });
-    tl.addLabel("start")
-      // 雲縮小往內飄進來
-      .to(
-        ".cloud-left, .cloud-right",
-        {
-          scale: 0.75,
-        },
-        "start"
-      )
-      // 隱藏紅綠燈文字, 只顯示紅燈
-      .to(
-        ".ready-frame__text, .ready-frame__center, .ready-frame__right",
-        {
-          opacity: 0,
-        },
-        "start"
-      )
-      // part 2
-      // 雲往中間飄 start
-      .set(
-        ".ready-frame__text",
-        {
-          text: "GO!!",
-        },
-        "start+=1.5"
-      )
-      .to(
-        ".cloud-left, .cloud-right",
-        {
-          x: gsap.utils.wrap([60, -60]),
-          y: -10,
-        },
-        "start+=1.5"
-      )
-      .to(
-        ".ready-frame__left, .ready-frame__center",
-        {
-          opacity: gsap.utils.wrap([0, 1]),
-        },
-        "start+=1.5"
-      )
-      // part-3
-      // 隱藏雲朵, 切換紅綠燈
-      .to(
-        ".cloud-left, .cloud-right",
-        {
-          scale: 0.3,
-          opacity: 0,
-        },
-        "start+=3"
-      )
-      .to(
-        ".ready-frame__center, .ready-frame__right",
-        {
-          opacity: gsap.utils.wrap([0, 1, 1]),
-        },
-        "start+=3"
-      )
-      .to(
-        ".ready-frame__text",
-        {
-          opacity: 1,
-        },
-        "start+=3"
-      )
-      // part-4
-      // 隱藏其餘區塊
-      .to(".kanban-content", { opacity: 0 }, "start+=4")
-      .to("#kanban-section", { opacity: 0 }, "start+=4.5");
+
+    gaspTimelineAddHandler({ tl, config: gsapConfig });
   });
 }
 
 export default function Kanban() {
   return (
-    <section id="kanban-section" className="mx-auto min-h-screen">
+    <section id="kanban-section" className="h-screen">
       <Banner />
       <Button
         color="highlight"

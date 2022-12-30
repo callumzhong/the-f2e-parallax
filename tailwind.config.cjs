@@ -109,6 +109,12 @@ module.exports = {
       backgroundImage: {
         btn_sponsor: "url(@/assets/btn/btn_sponsor.png)",
         btn_sponsor_hover: "url(@/assets/btn/btn_sponsor_h.png)",
+        "btn-burger-open": "url(@/assets/btn/btn_burger_open.png)",
+        "btn-burger-open-hover": "url(@/assets/btn/btn_burger_open_h.png)",
+        "btn-burger-open-pressed": "url(@/assets/btn/btn_burger_open_p.png)",
+        "btn-burger-close": "url(@/assets/btn/btn_burger_close.png)",
+        "btn-burger-close-hover": "url(@/assets/btn/btn_burger_close_h.png)",
+        "btn-burger-close-pressed": "url(@/assets/btn/btn_burger_close_p.png)",
       },
       colors: {
         primary: {

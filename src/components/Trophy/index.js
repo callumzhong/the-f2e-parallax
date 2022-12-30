@@ -1,3 +1,4 @@
-import Trophy from "./Trophy";
+import Trophy, { HandleOfTrophyAnimation } from "./Trophy";
 
+export { HandleOfTrophyAnimation };
 export default Trophy;

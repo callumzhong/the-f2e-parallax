@@ -1,23 +1,129 @@
 import gsap from "gsap";
+import gaspTimelineAddHandler from "@/utils/gaspTimelineAddHandler";
 import { Graffiti } from "../Decorate";
 
+const gsapConfig = {
+  default: [
+    {
+      target: "#encourage-section .graffiti-left",
+      vars: {
+        left: "-100%",
+        bottom: "-35%",
+      },
+    },
+    {
+      target: "#encourage-section .graffiti-right",
+      vars: {
+        right: "-100%",
+        bottom: "-35%",
+      },
+    },
+    {
+      target: ".encourage-section__text",
+      vars: {
+        scale: "1.5",
+        y: -80,
+        opacity: 0,
+      },
+    },
+  ],
+  child: [
+    {
+      target: ".map-now",
+      vars: {
+        left: 150,
+        top: 78,
+      },
+    },
+    {
+      target: ".footer-section__race",
+      vars: {
+        scale: 0.97,
+      },
+    },
+    {
+      target: ".footer-section__characters img",
+      vars: [
+        {
+          scale: 1.16,
+          bottom: -20,
+        },
+        {
+          scale: 1.03,
+          bottom: 23,
+        },
+        {
+          scale: 1.15,
+          bottom: -5,
+        },
+      ],
+    },
+    {
+      target:
+        "#encourage-section .graffiti-left, #encourage-section .graffiti-right",
+      vars: [
+        {
+          left: "-20%",
+          bottom: 0,
+        },
+        {
+          right: "-20%",
+          bottom: 0,
+        },
+      ],
+    },
+    {
+      target: ".encourage-section__text",
+      vars: {
+        opacity: 1,
+        scale: 1,
+        y: 0,
+      },
+      position: 1,
+    },
+
+    {
+      target:
+        "#encourage-section .graffiti-left, #encourage-section .graffiti-right",
+      vars: [
+        {
+          left: 0,
+        },
+        {
+          right: 0,
+        },
+      ],
+      position: 1,
+    },
+    {
+      target:
+        "#encourage-section .graffiti-left, #encourage-section .graffiti-right",
+      vars: [
+        {
+          scale: 0.5,
+          left: "40%",
+          opacity: 0,
+        },
+        {
+          scale: 0.5,
+          right: "40%",
+          opacity: 0,
+        },
+      ],
+      position: 3,
+    },
+    {
+      target: ".encourage-section__text",
+      vars: {
+        opacity: 0,
+      },
+      position: 3,
+    },
+  ],
+};
 export function HandleOfEncourageAnimation() {
   const mm = gsap.matchMedia();
   mm.add("(min-width:1280px)", () => {
-    gsap.set("#encourage-section .graffiti-left", {
-      left: "-100%",
-      bottom: "-35%",
-    });
-    gsap.set("#encourage-section .graffiti-right", {
-      right: "-100%",
-      bottom: "-35%",
-    });
-    gsap.set(".encourage-section__text", {
-      scale: "1.5",
-      y: -80,
-      opacity: 0,
-    });
-
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: "#encourage-section",
@@ -27,80 +133,7 @@ export function HandleOfEncourageAnimation() {
         scrub: 1,
       },
     });
-
-    tl.addLabel("start")
-      .to(
-        "#encourage-section .graffiti-left",
-        {
-          left: "-20%",
-          bottom: 0,
-        },
-        "start"
-      )
-      .to(
-        "#encourage-section .graffiti-right",
-        {
-          right: "-20%",
-          bottom: 0,
-        },
-        "start"
-      )
-      .to(
-        ".footer-section__race",
-        {
-          scale: 1,
-          y: 0,
-        },
-        "start"
-      )
-      .to(
-        ".encourage-section__text",
-        {
-          opacity: 1,
-          scale: 1,
-          y: 0,
-        },
-        "start+=1"
-      )
-      .to(
-        "#encourage-section .graffiti-left",
-        {
-          left: 0,
-        },
-        "start+=1"
-      )
-      .to(
-        "#encourage-section .graffiti-right",
-        {
-          right: 0,
-        },
-        "start+=1"
-      )
-      .to(
-        "#encourage-section .graffiti-left",
-        {
-          scale: 0.5,
-          left: "40%",
-          opacity: 0,
-        },
-        "start+=3"
-      )
-      .to(
-        "#encourage-section .graffiti-right",
-        {
-          scale: 0.5,
-          right: "40%",
-          opacity: 0,
-        },
-        "start+=3"
-      )
-      .to(
-        ".encourage-section__text",
-        {
-          opacity: 0,
-        },
-        "start+=3"
-      );
+    gaspTimelineAddHandler({ tl, config: gsapConfig });
   });
 }
 

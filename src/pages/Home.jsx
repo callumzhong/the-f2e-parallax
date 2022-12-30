@@ -11,10 +11,11 @@ import Cooperation, {
 import Week, { HandleOfWeekAnimation } from "@/components/Week";
 import Schedule, { HandleOfScheduleAnimation } from "@/components/Schedule";
 import Encourage, { HandleOfEncourageAnimation } from "@/components/Encourage";
-import Trophy from "@/components/Trophy";
-import Sponsor from "@/components/Sponsor";
+import Trophy, { HandleOfTrophyAnimation } from "@/components/Trophy";
+import Sponsor, { HandleOfSponsorAnimation } from "@/components/Sponsor";
 import SignUp from "@/components/SignUp";
 import Finish from "@/components/Finish";
+import { HandleOfFinishAnimation } from "@/components/Finish/Finish";
 
 gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
@@ -29,6 +30,9 @@ export default function HomePage() {
       HandleOfWeekAnimation();
       HandleOfScheduleAnimation();
       HandleOfEncourageAnimation();
+      HandleOfTrophyAnimation();
+      HandleOfSponsorAnimation();
+      HandleOfFinishAnimation();
     }, layoutRef);
     return () => ctx.revert();
   }, []);
