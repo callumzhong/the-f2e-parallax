@@ -16,9 +16,9 @@
     -ms-overflow-style: none;
   }
   /* In Firefox */
-  /* html {
+  html {
     scrollbar-width: none;
-  } */
+  }
 }
 
 @layer components {
@@ -27,8 +27,5 @@
   }
   .menu-close label {
     @apply bg-btn-burger-close hover:bg-btn-burger-close-hover active:bg-btn-burger-close-pressed;
-  }
-  .clip-animation {
-    clip-path: circle(40% at 50% 50%);
   }
 }

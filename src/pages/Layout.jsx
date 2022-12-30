@@ -19,11 +19,11 @@ const Layout = forwardRef(({ children }, ref) => {
         top: 0,
         left: 0,
       });
-      await sleep(1000);
+      await sleep(500);
       setPercentage("100%");
       await sleep(500);
       setCirclePercentage("100%");
-      await sleep(1000);
+      await sleep(500);
       setIsLoading(false);
     })();
   }, []);
@@ -34,7 +34,7 @@ const Layout = forwardRef(({ children }, ref) => {
         createPortal(<Loading percentage={percentage} />, document.body)}
       <div
         className={clsx(
-          "duration-1000",
+          "duration-500",
           isLoading && "h-screen overflow-hidden"
         )}
         style={{
