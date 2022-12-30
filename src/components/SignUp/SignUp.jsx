@@ -3,7 +3,7 @@ import JoinButton from "../JoinButton";
 
 export default function SignUp() {
   return (
-    <section className="pt-[15rem] pb-[2.4312rem] xl:h-screen xl:pb-0">
+    <section className="flex h-screen flex-col justify-center">
       <img className="mx-auto mb-10 w-[14.125rem]" src={ImageLogo} alt="" />
       <JoinButton
         className="relative z-50 mx-auto mb-5 h-[6.875rem] w-max"

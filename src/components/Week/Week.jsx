@@ -176,7 +176,7 @@ export function HandleOfWeekAnimation() {
 }
 export default function Week() {
   return (
-    <section id="week-section" className="pb-[3.8037rem] xl:min-h-screen">
+    <section id="week-section" className="pb-[3.75rem] xl:min-h-screen">
       <TitleSection className="week-section__title mb-1 h-[4.5rem] text-center xl:mt-[min(3.91vh,2.5rem)] xl:h-[min(14.75vh,9.4375rem)]  ">
         年度最強合作，三大主題來襲
       </TitleSection>

@@ -22,7 +22,7 @@ Title.propTypes = {
 
 export default function QuestionList() {
   return (
-    <ul className="question-list flex flex-wrap overflow-hidden xl:-mx-[0.625rem]">
+    <ul className="question-list flex flex-wrap gap-2 overflow-hidden xl:-mx-[0.625rem] xl:gap-0">
       <li className="h-full xl:w-1/3 xl:px-[0.625rem] 2xl:w-[28.5419rem]">
         <Title>羨慕別人的酷酷網頁動畫？</Title>
         <picture>

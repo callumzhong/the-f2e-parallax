@@ -170,7 +170,10 @@ export function HandleOfQuestionAnimation() {
 
 export default function Question() {
   return (
-    <section id="question-section" className="relative xl:h-screen">
+    <section
+      id="question-section"
+      className="relative pb-[3.75rem] xl:h-screen xl:pb-0"
+    >
       <TitleSection className="question-section__title mx-auto mb-10 h-[4.5rem] w-full xl:my-[min(3.91vh,2.5rem)] xl:h-[min(14.75vh,9.4375rem)]">
         你是否也有以下困擾？
       </TitleSection>

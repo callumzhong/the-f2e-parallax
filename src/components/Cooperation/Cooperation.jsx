@@ -88,7 +88,10 @@ export function HandleOfCooperationAnimation() {
 }
 export default function Cooperation() {
   return (
-    <section id="cooperation-section" className="xl:h-screen">
+    <section
+      id="cooperation-section"
+      className="pb-[3.75rem] xl:h-screen xl:pb-0"
+    >
       <TitleSection className="cooperation-section__title mb-1 h-[4.5rem] w-full text-center xl:mb-0 xl:mt-[min(3.91vh,2.5rem)] xl:h-[min(14.75vh,9.4375rem)]">
         本屆主題：互動式網頁設計？
       </TitleSection>
