@@ -4,7 +4,7 @@ import ImageCharacterUIGif from "@/assets/character/character_ui.gif";
 
 export default function Characters() {
   return (
-    <div className="footer-section__characters flex items-end justify-center px-5">
+    <div className="footer-section__characters flex origin-bottom items-end justify-center px-5">
       <img
         className="relative w-[7.0219rem] origin-bottom-right xl:bottom-[0.3125rem] xl:h-[min(50.49vh,32.3125rem)] xl:w-auto 2xl:bottom-[1rem] 2xl:w-[min(18.28vw,21.9375rem)] 2xl:max-w-full"
         src={ImageCharacterF2EGif}

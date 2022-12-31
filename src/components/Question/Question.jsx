@@ -151,6 +151,81 @@ const gsapConfig = {
   ],
 };
 
+const gsapMobileConfig = {
+  default: [
+    {
+      target: ".question-list li",
+      vars: {
+        opacity: 0,
+      },
+    },
+    {
+      target: ".question-list > li:nth-child(1)",
+      vars: {
+        x: -200,
+        y: -200,
+      },
+    },
+    {
+      target: ".question-list > li:nth-child(2)",
+      vars: {
+        y: -200,
+      },
+    },
+    {
+      target: ".question-list > li:nth-child(3)",
+      vars: {
+        y: -200,
+        x: 200,
+      },
+    },
+  ],
+  child: [
+    {
+      target: ".question-list > li:nth-child(1)",
+      vars: {
+        x: 0,
+        y: 0,
+        opacity: 1,
+      },
+    },
+    {
+      target: ".question-list > li:nth-child(2)",
+      vars: {
+        y: 0,
+        opacity: 1,
+      },
+      position: 1.5,
+    },
+    {
+      target: ".question-list > li:nth-child(3)",
+      vars: {
+        y: 0,
+        x: 0,
+        opacity: 1,
+      },
+      position: 2,
+    },
+    {
+      target: ".cooperation-section__title,.cooperation-section__subtitle",
+      vars: {
+        opacity: 1,
+        y: 0,
+      },
+      position: 3,
+    },
+    {
+      target: ".cooperation-list > li:nth-child(1)",
+      vars: {
+        x: 0,
+        y: 0,
+        opacity: 1,
+      },
+      position: 4,
+    },
+  ],
+};
+
 export function HandleOfQuestionAnimation() {
   const mm = gsap.matchMedia();
   mm.add("(min-width:1280px)", () => {
@@ -165,6 +240,20 @@ export function HandleOfQuestionAnimation() {
     });
 
     gaspTimelineAddHandler({ tl, config: gsapConfig });
+  });
+  mm.add("(max-width:1279.98px)", () => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#question-section",
+        start: "top top",
+        end: "+=800",
+        scrub: 1,
+      },
+    });
+    gaspTimelineAddHandler({
+      tl,
+      config: gsapMobileConfig,
+    });
   });
 }
 

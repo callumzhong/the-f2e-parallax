@@ -70,6 +70,79 @@ const gsapConfig = {
   ],
 };
 
+const gsapMobileConfig = {
+  default: [
+    {
+      target: ".cooperation-section__title,.cooperation-section__subtitle",
+      vars: {
+        opacity: 0,
+        y: -100,
+      },
+    },
+    {
+      target: ".cooperation-list li",
+      vars: {
+        opacity: 0,
+      },
+    },
+    {
+      target: ".cooperation-list > li:nth-child(1)",
+      vars: {
+        x: 200,
+        y: -200,
+      },
+    },
+    {
+      target: ".cooperation-list > li:nth-child(2)",
+      vars: {
+        y: -200,
+        x: -200,
+      },
+    },
+    {
+      target: ".cooperation-list > li:nth-child(3)",
+      vars: {
+        y: -200,
+        x: 200,
+      },
+    },
+  ],
+  child: [
+    {
+      target: ".cooperation-list > li:nth-child(2)",
+      vars: {
+        y: 0,
+        x: 0,
+        opacity: 1,
+      },
+    },
+    {
+      target: ".cooperation-list > li:nth-child(3)",
+      vars: {
+        y: 0,
+        x: 0,
+        opacity: 1,
+      },
+      position: 1,
+    },
+    {
+      target: ".week-section__title,.week-section__subtitle",
+      vars: {
+        y: 0,
+        opacity: 1,
+      },
+      position: 2,
+    },
+    {
+      target: ".week-list li:nth-child(1)",
+      vars: {
+        opacity: 1,
+      },
+      position: 3,
+    },
+  ],
+};
+
 export function HandleOfCooperationAnimation() {
   const mm = gsap.matchMedia();
   mm.add("(min-width:1280px)", () => {
@@ -78,12 +151,27 @@ export function HandleOfCooperationAnimation() {
         trigger: "#cooperation-section",
         pin: true,
         start: "top top",
-        end: "+=500",
+        end: "+=200",
         scrub: 1,
       },
     });
 
     gaspTimelineAddHandler({ tl, config: gsapConfig });
+  });
+
+  mm.add("(max-width:1279.98px)", () => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#cooperation-section",
+        start: "top top",
+        end: "+=800",
+        scrub: 1,
+      },
+    });
+    gaspTimelineAddHandler({
+      tl,
+      config: gsapMobileConfig,
+    });
   });
 }
 export default function Cooperation() {
@@ -98,7 +186,7 @@ export default function Cooperation() {
       <p className="cooperation-section__subtitle mb-10 text-center text-mobile-h5 text-secondary-dark md:text-desktop-h5 xl:mb-[min(3.81vh,2.4375rem)] xl:font-normal 2xl:font-bold">
         以下兩個角色進行攜手合作
       </p>
-      <div className="mx-auto px-5 md:w-[62.24vw] xl:w-[min(81.94vw,73.75rem)]">
+      <div className="mx-auto overflow-hidden px-5 md:w-[62.24vw] xl:w-[min(81.94vw,73.75rem)]">
         <CooperationList />
       </div>
     </section>

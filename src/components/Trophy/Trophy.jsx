@@ -122,6 +122,64 @@ const gsapConfig = {
   ],
 };
 
+const gsapMobileConfig = {
+  default: [
+    {
+      target: ".trophy-section__title",
+      vars: {
+        opacity: 0,
+        y: -100,
+      },
+    },
+    {
+      target: ".trophy-content >div, .trophy-content > ul",
+      vars: [
+        {
+          opacity: 0,
+        },
+        {
+          opacity: 0,
+          y: 100,
+        },
+      ],
+    },
+  ],
+  child: [
+    {
+      target: ".trophy-content > ul",
+      vars: {
+        opacity: 1,
+        y: 0,
+      },
+    },
+    {
+      target: ".trophy-content__mask",
+      vars: {
+        keyframes: {
+          "0%": { rotate: 0 },
+          "50%": { rotate: -180 },
+          "100%": { rotate: -360 },
+        },
+      },
+    },
+    {
+      target: ".sponsor-section__title",
+      vars: {
+        opacity: 1,
+        y: 0,
+      },
+      position: 1,
+    },
+    {
+      target: ".sponsor-list li:nth-child(1)",
+      vars: {
+        opacity: 1,
+      },
+      position: 2,
+    },
+  ],
+};
+
 export function HandleOfTrophyAnimation() {
   const mm = gsap.matchMedia();
   mm.add("(min-width:1280px)", () => {
@@ -136,6 +194,21 @@ export function HandleOfTrophyAnimation() {
     });
     gaspTimelineAddHandler({ tl, config: gsapConfig });
   });
+
+  mm.add("(max-width:1279.98px)", () => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#trophy-section",
+        start: "top top",
+        end: "+=600",
+        scrub: 1,
+      },
+    });
+    gaspTimelineAddHandler({
+      tl,
+      config: gsapMobileConfig,
+    });
+  });
 }
 
 export default function Trophy() {
@@ -144,7 +217,7 @@ export default function Trophy() {
       <TitleSection className="trophy-section__title mx-auto mb-10 h-[4.5rem] w-full xl:my-[min(3.91vh,2.5rem)] xl:h-[min(14.75vh,9.4375rem)]">
         還有比賽等著你！
       </TitleSection>
-      <div className="mx-auto px-5 pb-[3.75rem] md:w-[62.24vw] xl:w-[min(81.94vw,73.75rem)] 2xl:w-[75rem]">
+      <div className="mx-auto overflow-hidden px-5 pb-[3.75rem] md:w-[62.24vw] xl:w-[min(81.94vw,73.75rem)] 2xl:w-[75rem]">
         <Content />
       </div>
     </section>

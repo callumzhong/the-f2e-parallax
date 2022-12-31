@@ -16,6 +16,7 @@ import Sponsor, { HandleOfSponsorAnimation } from "@/components/Sponsor";
 import SignUp from "@/components/SignUp";
 import Finish from "@/components/Finish";
 import { HandleOfFinishAnimation } from "@/components/Finish/Finish";
+import { HandleOfSignUpAnimation } from "@/components/SignUp/SignUp";
 
 gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
@@ -33,6 +34,7 @@ export default function HomePage() {
       HandleOfTrophyAnimation();
       HandleOfSponsorAnimation();
       HandleOfFinishAnimation();
+      HandleOfSignUpAnimation();
     }, layoutRef);
     return () => ctx.revert();
   }, []);

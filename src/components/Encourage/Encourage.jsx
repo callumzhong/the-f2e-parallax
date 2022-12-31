@@ -121,6 +121,54 @@ const gsapConfig = {
     },
   ],
 };
+
+const gsapMobileConfig = {
+  default: [
+    {
+      target: ".encourage-section__text",
+      vars: {
+        opacity: 0,
+        scale: 3,
+        y: -300,
+      },
+    },
+  ],
+  child: [
+    {
+      target: ".trophy-section__title",
+      vars: {
+        opacity: 1,
+        y: 0,
+      },
+    },
+    {
+      target: ".trophy-content >div",
+      vars: {
+        opacity: 1,
+      },
+      position: 1,
+    },
+    {
+      target: ".trophy-content__mask",
+      vars: {
+        keyframes: {
+          "0%": { rotate: 0 },
+          "50%": { rotate: -180 },
+          "100%": { rotate: -360 },
+        },
+      },
+      position: 1,
+    },
+    {
+      target: ".trophy-content__mask",
+      vars: {
+        keyframes: {},
+      },
+      position: 1.5,
+    },
+  ],
+};
+
 export function HandleOfEncourageAnimation() {
   const mm = gsap.matchMedia();
   mm.add("(min-width:1280px)", () => {
@@ -134,6 +182,21 @@ export function HandleOfEncourageAnimation() {
       },
     });
     gaspTimelineAddHandler({ tl, config: gsapConfig });
+  });
+
+  mm.add("(max-width:1279.98px)", () => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#encourage-section",
+        start: "top top",
+        end: "+=200",
+        scrub: 1,
+      },
+    });
+    gaspTimelineAddHandler({
+      tl,
+      config: gsapMobileConfig,
+    });
   });
 }
 

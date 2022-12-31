@@ -158,6 +158,48 @@ const gsapConfig = {
   ],
 };
 
+const gsapMobileConfig = {
+  default: [
+    {
+      target: ".week-section__title,.week-section__subtitle",
+      vars: {
+        opacity: 0,
+        y: -100,
+      },
+    },
+    {
+      target: ".week-list li",
+      vars: {
+        opacity: 0,
+      },
+    },
+  ],
+  child: [
+    {
+      target: ".week-list li",
+      vars: {
+        opacity: 1,
+      },
+      position: [0, 1, 2],
+    },
+    {
+      target: ".schedule-section__title",
+      vars: {
+        y: 0,
+        opacity: 1,
+      },
+      position: 3,
+    },
+    {
+      target: ".schedule-list li:nth-child(1)",
+      vars: {
+        opacity: 1,
+      },
+      position: 4,
+    },
+  ],
+};
+
 export function HandleOfWeekAnimation() {
   const mm = gsap.matchMedia();
   mm.add("(min-width:1280px)", () => {
@@ -172,6 +214,21 @@ export function HandleOfWeekAnimation() {
     });
 
     gaspTimelineAddHandler({ tl, config: gsapConfig });
+  });
+
+  mm.add("(max-width:1279.98px)", () => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#week-section",
+        start: "top top",
+        end: "+=1000",
+        scrub: 1,
+      },
+    });
+    gaspTimelineAddHandler({
+      tl,
+      config: gsapMobileConfig,
+    });
   });
 }
 export default function Week() {

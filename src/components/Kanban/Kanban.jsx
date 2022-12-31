@@ -101,6 +101,71 @@ const gsapConfig = {
     },
   ],
 };
+const gsapMobileConfig = {
+  default: [
+    {
+      target: ".question-section__title",
+      vars: {
+        y: 100,
+        opacity: 0,
+      },
+    },
+    {
+      target: ".footer-section .join",
+      vars: {
+        opacity: 0,
+        display: "none",
+      },
+    },
+  ],
+  child: [
+    {
+      target: ".ready-frame",
+      vars: {
+        opacity: 0,
+      },
+    },
+    {
+      target: ".footer-section__race",
+      vars: {
+        scale: 0.47,
+      },
+      position: 1,
+    },
+    {
+      target: ".footer-section__characters",
+      vars: {
+        scale: 0.47,
+      },
+      position: 1,
+    },
+    {
+      target: ".footer-section .join",
+      vars: {
+        display: "block",
+        opacity: 1,
+      },
+      position: 1,
+    },
+    {
+      target: ".question-section__title",
+      vars: {
+        opacity: 1,
+        y: 0,
+      },
+      position: 1,
+    },
+    {
+      target: ".question-list > li:nth-child(1)",
+      vars: {
+        x: 0,
+        y: 0,
+        opacity: 1,
+      },
+      position: 2,
+    },
+  ],
+};
 
 export function HandleOfKanbanAnimation() {
   const mm = gsap.matchMedia();
@@ -116,6 +181,20 @@ export function HandleOfKanbanAnimation() {
     });
 
     gaspTimelineAddHandler({ tl, config: gsapConfig });
+  });
+  mm.add("(max-width:1279.98px)", () => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#kanban-section",
+        start: "top top",
+        end: "+=300",
+        scrub: 1,
+      },
+    });
+    gaspTimelineAddHandler({
+      tl,
+      config: gsapMobileConfig,
+    });
   });
 }
 

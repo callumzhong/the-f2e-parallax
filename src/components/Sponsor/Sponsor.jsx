@@ -141,6 +141,77 @@ const gsapConfig = {
     },
   ],
 };
+
+const gsapMobileConfig = {
+  default: [
+    {
+      target: ".sponsor-section__title",
+      vars: {
+        opacity: 0,
+        y: -100,
+      },
+    },
+    {
+      target: ".sponsor-list li",
+      vars: {
+        opacity: 0,
+      },
+    },
+  ],
+  child: [
+    {
+      target: ".sponsor-list li:nth-child(2)",
+      vars: {
+        opacity: 1,
+      },
+    },
+    {
+      target: ".sponsor-list li:nth-child(3)",
+      vars: {
+        opacity: 1,
+      },
+      position: 1,
+    },
+    {
+      target: ".sign-up-section__logo",
+      vars: {
+        opacity: 1,
+        y: 0,
+      },
+      position: 2,
+    },
+    {
+      target: "sign-up-section__button,.sign-up-section__text",
+      vars: {
+        opacity: 1,
+        y: 0,
+      },
+      position: 2,
+    },
+    {
+      target: ".footer-section .join",
+      vars: {
+        display: "none",
+        opacity: 0,
+      },
+      position: 2,
+    },
+    {
+      target: ".footer-section__race",
+      vars: {
+        scale: 1,
+      },
+      position: 2,
+    },
+    {
+      target: ".footer-section__characters",
+      vars: {
+        scale: 1,
+      },
+      position: 2,
+    },
+  ],
+};
 export function HandleOfSponsorAnimation() {
   const mm = gsap.matchMedia();
   mm.add("(min-width:1280px)", () => {
@@ -156,12 +227,26 @@ export function HandleOfSponsorAnimation() {
 
     gaspTimelineAddHandler({ tl, config: gsapConfig });
   });
+  mm.add("(max-width:1279.98px)", () => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#sponsor-section",
+        start: "top top",
+        end: "+=900",
+        scrub: 1,
+      },
+    });
+    gaspTimelineAddHandler({
+      tl,
+      config: gsapMobileConfig,
+    });
+  });
 }
 
 export default function Sponsor() {
   return (
-    <section id="sponsor-section" className="overflow-hidden xl:h-screen">
-      <TitleSection className="sponsor-section__title mx-auto mb-10 h-[4.5rem] w-full xl:mt-10 xl:mb-[min(3.91vh,2.5rem)] xl:h-[min(14.75vh,9.4375rem)]">
+    <section id="sponsor-section" className="xl:h-screen">
+      <TitleSection className="sponsor-section__title relative mx-auto mb-10 h-[4.5rem] w-full xl:mt-10 xl:mb-[min(3.91vh,2.5rem)] xl:h-[min(14.75vh,9.4375rem)]">
         贊助單位
       </TitleSection>
       <div className="relative mx-auto xl:w-[min(83.06vw,74.75rem)]">
