@@ -1,18 +1,5 @@
-import gsap from "gsap";
-
-export function gsapSetHandler({ target, vars }) {
-  const elements = gsap.utils.toArray(target);
-  return elements.map((element, idx) =>
-    gsap.set(element, Array.isArray(vars) ? vars[idx] : vars)
-  );
-}
-
-export function gsapToHandler({ target, vars }) {
-  const elements = gsap.utils.toArray(target);
-  return elements.map((element, idx) =>
-    gsap.to(element, Array.isArray(vars) ? vars[idx] : vars)
-  );
-}
+import gsapSetHandler from "./gsapSetHandler";
+import gsapToHandler from "./gsapToHandler";
 
 export default function gaspTimelineAddHandler({ tl, config }) {
   if (Array.isArray(config.default)) {
@@ -43,10 +30,11 @@ export default function gaspTimelineAddHandler({ tl, config }) {
               target,
               vars,
             });
-
-      tweens.forEach((tween, idx) => {
-        tl.add(tween, Array.isArray(position) ? position[idx] : position);
-      });
+      if (!vars.scrollTrigger) {
+        tweens.forEach((tween, idx) => {
+          tl.add(tween, Array.isArray(position) ? position[idx] : position);
+        });
+      }
     });
   } else {
     tl.add(

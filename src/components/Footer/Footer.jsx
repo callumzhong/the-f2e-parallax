@@ -1,6 +1,6 @@
 import gsap from "gsap";
 import { useEffect } from "react";
-import { gsapToHandler } from "@/utils/gaspTimelineAddHandler";
+import gsapToHandler from "@/utils/gsapToHandler";
 import Characters from "./Characters";
 import FinishLine from "./FinishLine";
 import Join from "./Join";
