@@ -11,7 +11,6 @@ const Layout = forwardRef(({ children }, ref) => {
   const [circlePercentage, setCirclePercentage] = useState("0");
   const [percentage, setPercentage] = useState("0");
   const [isLoading, setIsLoading] = useState(true);
-
   useEffect(() => {
     (async () => {
       // 確保動畫順利，重新整理網頁回到頂端

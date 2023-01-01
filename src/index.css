@@ -19,6 +19,9 @@
   html {
     scrollbar-width: none;
   }
+  html {
+    cursor: url("@/assets/cursor/cursor.png"), auto;
+  }
 }
 
 @layer components {

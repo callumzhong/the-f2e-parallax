@@ -67,6 +67,7 @@ export default function Menu() {
               href={item.href}
               imageSrc={item.image.default}
               imageSrcHover={item.image.hover}
+              imageSrcPressed={item.image.pressed}
             >
               {item.name}
             </MenuItem>

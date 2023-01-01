@@ -1,13 +1,13 @@
 import gsap from "gsap";
 
-function gsapSetHandler({ target, vars }) {
+export function gsapSetHandler({ target, vars }) {
   const elements = gsap.utils.toArray(target);
   return elements.map((element, idx) =>
     gsap.set(element, Array.isArray(vars) ? vars[idx] : vars)
   );
 }
 
-function gsapToHandler({ target, vars }) {
+export function gsapToHandler({ target, vars }) {
   const elements = gsap.utils.toArray(target);
   return elements.map((element, idx) =>
     gsap.to(element, Array.isArray(vars) ? vars[idx] : vars)
