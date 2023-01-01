@@ -1,3 +1,4 @@
-import Question from "./Question";
+import Question, { HandleOfQuestionAnimation } from "./Question";
 
-export default Question
+export { HandleOfQuestionAnimation };
+export default Question;

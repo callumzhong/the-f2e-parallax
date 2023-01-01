@@ -5,7 +5,7 @@ import Button from "../Button";
 
 export default function WeekList() {
   return (
-    <ul className="flex flex-col items-center gap-11 text-center">
+    <ul className="week-list flex flex-col items-center gap-11 text-center">
       <li className="flex w-full flex-col gap-2 xl:w-max xl:flex-row xl:items-start xl:gap-10 xl:self-start">
         <img
           className="mx-auto w-[12.5rem] xl:w-[17.5rem]"
@@ -39,6 +39,7 @@ export default function WeekList() {
             className="inline-block px-6 text-lg leading-[2.3125rem]"
             variant="fill"
             color="secondary"
+            href="https://2022.thef2e.com/news/week1"
           >
             查看關卡細節
           </Button>
@@ -77,6 +78,7 @@ export default function WeekList() {
             className="inline-block px-6 text-lg leading-[2.3125rem]"
             variant="fill"
             color="secondary"
+            href="https://2022.thef2e.com/news/week2"
           >
             查看關卡細節
           </Button>
@@ -115,6 +117,7 @@ export default function WeekList() {
             className="inline-block px-6 text-lg leading-[2.3125rem]"
             variant="fill"
             color="secondary"
+            href="https://2022.thef2e.com/news/week3"
           >
             查看關卡細節
           </Button>

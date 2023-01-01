@@ -10,7 +10,7 @@ export default function JoinButton({ isStay, isAnimation, className, href }) {
         target="_blank"
         rel="noreferrer"
         href={href}
-        className={clsx("overflow block group relative mx-auto", className)}
+        className={clsx("overflow group relative mx-auto block", className)}
       >
         <JoinButtonContent isAnimation={isAnimation} isStay={isStay} />
       </a>
@@ -19,7 +19,7 @@ export default function JoinButton({ isStay, isAnimation, className, href }) {
   return (
     <div
       className={clsx(
-        "overflow group relative mx-auto overflow-x-hidden",
+        "overflow group relative mx-auto overflow-hidden",
         className
       )}
     >

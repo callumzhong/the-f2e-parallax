@@ -3,14 +3,14 @@ import ImageDecorate04 from "@/assets/bg/bg_decorate_04.png";
 
 export default function Tree() {
   return (
-    <div className="relative -z-20 flex justify-between">
+    <div className="absolute -inset-x-28 -bottom-6 -z-20 hidden justify-between xl:flex">
       <img
-        className="-mt-16 h-[min(53.52vh,34.25rem)]"
+        className="tree-left h-[min(53.52vh,34.25rem)] origin-bottom-right"
         src={ImageDecorate04}
         alt=""
       />
       <img
-        className="-mt-10 h-[min(50.98vh,32.625rem)]"
+        className="tree-right h-[min(50.98vh,32.625rem)] origin-bottom-left"
         src={ImageDecorate08}
         alt=""
       />
