@@ -238,7 +238,6 @@ export function HandleOfQuestionAnimation() {
       scrollTrigger: {
         trigger: "#question-section",
         start: "top top",
-        markers: 1,
         end: "+=800",
         scrub: 1,
       },
