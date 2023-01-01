@@ -182,20 +182,12 @@ const gsapMobileConfig = {
   ],
   child: [
     {
-      target: ".question-list > li:nth-child(1)",
-      vars: {
-        x: 0,
-        y: 0,
-        opacity: 1,
-      },
-    },
-    {
       target: ".question-list > li:nth-child(2)",
       vars: {
         y: 0,
         opacity: 1,
       },
-      position: 1.5,
+      position: 1,
     },
     {
       target: ".question-list > li:nth-child(3)",
@@ -246,6 +238,7 @@ export function HandleOfQuestionAnimation() {
       scrollTrigger: {
         trigger: "#question-section",
         start: "top top",
+        markers: 1,
         end: "+=800",
         scrub: 1,
       },
