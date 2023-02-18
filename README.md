@@ -12,7 +12,9 @@ The F2E Parallax
 - Vite
 
 ## Project Screen Shot(s)
-[![Watch the video](https://img.youtube.com/vi/0vLSGXzpueQ/maxresdefault.jpg)](https://youtu.be/0vLSGXzpueQ)
+
+https://user-images.githubusercontent.com/103582829/219881455-aeb9787e-0e94-43a7-8e42-ebad1dbe3665.mp4
+
 ![Screenshot 2023-02-19 at 00-26-42 互動式網頁設計 - https __the-f2e-parallax vercel app_](https://user-images.githubusercontent.com/103582829/219876871-11b67992-5b6c-4c87-a631-f1b44d2d95d1.png)
 ![Screenshot 2023-02-19 at 00-26-14 互動式網頁設計 - https __the-f2e-parallax vercel app_](https://user-images.githubusercontent.com/103582829/219876874-0e92bd52-4298-4c00-8775-cb7b7e6ccf0e.png)
 
