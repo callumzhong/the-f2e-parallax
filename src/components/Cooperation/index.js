@@ -1,4 +1,3 @@
-import Cooperation, { HandleOfCooperationAnimation } from "./Cooperation";
+import Cooperation from "./Cooperation";
 
-export { HandleOfCooperationAnimation };
 export default Cooperation;

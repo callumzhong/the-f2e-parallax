@@ -1,4 +1,3 @@
-import Schedule, { HandleOfScheduleAnimation } from "./Schedule";
+import Schedule from "./Schedule";
 
-export { HandleOfScheduleAnimation };
 export default Schedule;

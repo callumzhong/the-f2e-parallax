@@ -1,182 +1,12 @@
-import gsap from "gsap";
-import gaspTimelineAddHandler from "@/utils/gaspTimelineAddHandler";
+import { forwardRef } from "react";
 import TitleSection from "../TitleSection/TitleSection";
 import CooperationList from "./CooperationList";
+import GSAPanimation from "../GSAPanimation";
 
-const gsapConfig = {
-  default: [
-    {
-      target: ".cooperation-section__title, .cooperation-section__subtitle",
-      vars: {
-        opacity: 0,
-      },
-    },
-    {
-      target: ".cooperation-list",
-      vars: {
-        opacity: 0,
-        y: 50,
-        display: "none",
-      },
-    },
-  ],
-  child: [
-    {
-      target: ".map-now",
-      vars: {
-        left: 80,
-        top: 0,
-      },
-    },
-    {
-      target: ".cooperation-section__title, .cooperation-section__subtitle",
-      vars: {
-        opacity: 1,
-      },
-    },
-    {
-      target: ".map-now",
-      vars: {
-        left: 114,
-        top: 12,
-      },
-      position: 0.5,
-    },
-    {
-      target: ".cooperation-list",
-      vars: {
-        opacity: 1,
-        y: 0,
-        display: "flex",
-      },
-      position: 1.5,
-    },
-    {
-      target: ".cooperation-section__title, .cooperation-section__subtitle",
-      vars: {
-        opacity: 0,
-      },
-      position: 5,
-    },
-    {
-      target: ".cooperation-list",
-      vars: {
-        opacity: 0,
-        y: 50,
-        display: "none",
-      },
-      position: 5,
-    },
-  ],
-};
-
-const gsapMobileConfig = {
-  default: [
-    {
-      target: ".cooperation-section__title,.cooperation-section__subtitle",
-      vars: {
-        opacity: 0,
-        y: -100,
-      },
-    },
-    {
-      target: ".cooperation-list li",
-      vars: {
-        opacity: 0,
-      },
-    },
-    {
-      target: ".cooperation-list > li:nth-child(1)",
-      vars: {
-        x: 200,
-        y: -200,
-      },
-    },
-    {
-      target: ".cooperation-list > li:nth-child(2)",
-      vars: {
-        y: -200,
-        x: -200,
-      },
-    },
-    {
-      target: ".cooperation-list > li:nth-child(3)",
-      vars: {
-        y: -200,
-        x: 200,
-      },
-    },
-  ],
-  child: [
-    {
-      target: ".cooperation-list > li:nth-child(2)",
-      vars: {
-        y: 0,
-        x: 0,
-        opacity: 1,
-      },
-    },
-    {
-      target: ".cooperation-list > li:nth-child(3)",
-      vars: {
-        y: 0,
-        x: 0,
-        opacity: 1,
-      },
-      position: 1,
-    },
-    {
-      target: ".week-section__title,.week-section__subtitle",
-      vars: {
-        y: 0,
-        opacity: 1,
-      },
-      position: 2,
-    },
-    {
-      target: ".week-list li:nth-child(1)",
-      vars: {
-        opacity: 1,
-      },
-      position: 3,
-    },
-  ],
-};
-
-export function HandleOfCooperationAnimation() {
-  const mm = gsap.matchMedia();
-  mm.add("(min-width:1280px)", () => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: "#cooperation-section",
-        pin: true,
-        start: "top top",
-        end: "+=200",
-        scrub: 1,
-      },
-    });
-
-    gaspTimelineAddHandler({ tl, config: gsapConfig });
-  });
-
-  mm.add("(max-width:1279.98px)", () => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: "#cooperation-section",
-        start: "top top",
-        end: "+=800",
-        scrub: 1,
-      },
-    });
-    gaspTimelineAddHandler({
-      tl,
-      config: gsapMobileConfig,
-    });
-  });
-}
-export default function Cooperation() {
+const ForwardRefComponent = forwardRef(function Cooperation(_, ref) {
   return (
     <section
+      ref={ref}
       id="cooperation-section"
       className="pb-[3.75rem] xl:h-screen xl:pb-0"
     >
@@ -190,5 +20,176 @@ export default function Cooperation() {
         <CooperationList />
       </div>
     </section>
+  );
+});
+
+export default function Entry() {
+  return (
+    <GSAPanimation
+      child={ForwardRefComponent}
+      configs={[
+        {
+          conditions: "(min-width:1280px)",
+          default: [
+            {
+              target:
+                ".cooperation-section__title, .cooperation-section__subtitle",
+              vars: {
+                opacity: 0,
+              },
+            },
+            {
+              target: ".cooperation-list",
+              vars: {
+                opacity: 0,
+                y: 50,
+                display: "none",
+              },
+            },
+          ],
+          timeline: {
+            scrollTrigger: {
+              trigger: "#cooperation-section",
+              pin: true,
+              start: "top top",
+              end: "+=200",
+              scrub: 1,
+            },
+          },
+          animations: [
+            {
+              target: ".map-now",
+              vars: {
+                left: 80,
+                top: 0,
+              },
+            },
+            {
+              target:
+                ".cooperation-section__title, .cooperation-section__subtitle",
+              vars: {
+                opacity: 1,
+              },
+            },
+            {
+              target: ".map-now",
+              vars: {
+                left: 114,
+                top: 12,
+              },
+              position: 0.5,
+            },
+            {
+              target: ".cooperation-list",
+              vars: {
+                opacity: 1,
+                y: 0,
+                display: "flex",
+              },
+              position: 1.5,
+            },
+            {
+              target:
+                ".cooperation-section__title, .cooperation-section__subtitle",
+              vars: {
+                opacity: 0,
+              },
+              position: 5,
+            },
+            {
+              target: ".cooperation-list",
+              vars: {
+                opacity: 0,
+                y: 50,
+                display: "none",
+              },
+              position: 5,
+            },
+          ],
+        },
+        {
+          conditions: "(max-width:1279.98px)",
+          default: [
+            {
+              target:
+                ".cooperation-section__title,.cooperation-section__subtitle",
+              vars: {
+                opacity: 0,
+                y: -100,
+              },
+            },
+            {
+              target: ".cooperation-list li",
+              vars: {
+                opacity: 0,
+              },
+            },
+            {
+              target: ".cooperation-list > li:nth-child(1)",
+              vars: {
+                x: 200,
+                y: -200,
+              },
+            },
+            {
+              target: ".cooperation-list > li:nth-child(2)",
+              vars: {
+                y: -200,
+                x: -200,
+              },
+            },
+            {
+              target: ".cooperation-list > li:nth-child(3)",
+              vars: {
+                y: -200,
+                x: 200,
+              },
+            },
+          ],
+          timeline: {
+            scrollTrigger: {
+              trigger: "#cooperation-section",
+              start: "top top",
+              end: "+=800",
+              scrub: 1,
+            },
+          },
+          animations: [
+            {
+              target: ".cooperation-list > li:nth-child(2)",
+              vars: {
+                y: 0,
+                x: 0,
+                opacity: 1,
+              },
+            },
+            {
+              target: ".cooperation-list > li:nth-child(3)",
+              vars: {
+                y: 0,
+                x: 0,
+                opacity: 1,
+              },
+              position: 1,
+            },
+            {
+              target: ".week-section__title,.week-section__subtitle",
+              vars: {
+                y: 0,
+                opacity: 1,
+              },
+              position: 2,
+            },
+            {
+              target: ".week-list li:nth-child(1)",
+              vars: {
+                opacity: 1,
+              },
+              position: 3,
+            },
+          ],
+        },
+      ]}
+    />
   );
 }

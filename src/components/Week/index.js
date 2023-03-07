@@ -1,4 +1,3 @@
-import Week, { HandleOfWeekAnimation } from "./Week";
+import Week from "./Week";
 
-export { HandleOfWeekAnimation };
 export default Week;

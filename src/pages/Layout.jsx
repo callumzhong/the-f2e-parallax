@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import React, { forwardRef, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import clsx from "clsx";
 import Header from "@/components/Header";
@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import Loading from "@/components/Loading";
 import sleep from "@/utils/sleep";
 
-const Layout = forwardRef(({ children }, ref) => {
+function Layout({ children }) {
   const [circlePercentage, setCirclePercentage] = useState("0");
   const [percentage, setPercentage] = useState("0");
   const [isLoading, setIsLoading] = useState(true);
@@ -39,7 +39,6 @@ const Layout = forwardRef(({ children }, ref) => {
         style={{
           clipPath: `circle(${circlePercentage})`,
         }}
-        ref={ref}
       >
         <Header />
         <main>{children}</main>
@@ -47,7 +46,7 @@ const Layout = forwardRef(({ children }, ref) => {
       </div>
     </>
   );
-});
+}
 
 Layout.displayName = "Layout";
 Layout.propTypes = {

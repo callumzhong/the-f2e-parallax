@@ -1,4 +1,3 @@
-import Kanban, { HandleOfKanbanAnimation } from "./Kanban";
+import Kanban from "./Kanban";
 
-export { HandleOfKanbanAnimation };
 export default Kanban;

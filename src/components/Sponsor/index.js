@@ -1,4 +1,3 @@
-import Sponsor, { HandleOfSponsorAnimation } from "./Sponsor";
+import Sponsor from "./Sponsor";
 
-export { HandleOfSponsorAnimation };
 export default Sponsor;
