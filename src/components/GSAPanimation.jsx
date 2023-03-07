@@ -1,6 +1,10 @@
 import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import TextPlugin from "gsap/TextPlugin";
 import PropTypes from "prop-types";
 import { useLayoutEffect, useRef } from "react";
+
+gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
 export function gsapSetHandler({ target, vars }) {
   const elements = gsap.utils.toArray(target);

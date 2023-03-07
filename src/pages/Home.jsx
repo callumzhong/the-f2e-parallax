@@ -1,6 +1,3 @@
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-import TextPlugin from "gsap/TextPlugin";
 import Layout from "./Layout";
 import Kanban from "@/components/Kanban";
 import Question from "@/components/Question";
@@ -13,27 +10,7 @@ import Sponsor from "@/components/Sponsor";
 import SignUp from "@/components/SignUp";
 import Finish from "@/components/Finish";
 
-gsap.registerPlugin(ScrollTrigger, TextPlugin);
-
 export default function HomePage() {
-  // const layoutRef = useRef();
-
-  // useLayoutEffect(() => {
-  //   const ctx = gsap.context(() => {
-  //     HandleOfKanbanAnimation();
-  //     HandleOfQuestionAnimation();
-  //     HandleOfCooperationAnimation();
-  //     HandleOfWeekAnimation();
-  //     HandleOfScheduleAnimation();
-  //     HandleOfEncourageAnimation();
-  //     HandleOfTrophyAnimation();
-  //     HandleOfSponsorAnimation();
-  //     HandleOfFinishAnimation();
-  //     HandleOfSignUpAnimation();
-  //   }, layoutRef);
-  //   return () => ctx.revert();
-  // }, []);
-
   return (
     <Layout>
       <Kanban />
